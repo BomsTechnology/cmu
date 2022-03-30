@@ -1,7 +1,20 @@
 <script setup>
-import Header from '../components/Header.vue'
-import SubHeader from '../components/SubHeader.vue'
-import Footer from '../components/Footer.vue';
+    import Header from '../components/Header.vue'
+    import SubHeader from '../components/SubHeader.vue'
+    import Footer from '../components/Footer.vue';
+    import useAuth from "../services/authServices.js"
+    import Error from "../components/Error.vue";
+    import { reactive, ref, onMounted} from "vue";
+
+    const user = reactive({
+            email: "",
+            password: "",
+        });
+        const { loginUser , errors, loading } = useAuth();
+
+        const login = async () => {
+                await loginUser({...user});
+        };
 </script>
 
 <template>
@@ -9,18 +22,18 @@ import Footer from '../components/Footer.vue';
 <SubHeader :title="'Log In'"/>
 
     <section class="max-w-lg my-10 p-6 mx-auto bg-white rounded-md shadow-lg dark:bg-gray-800">
-        
-        <form>
+        <Error v-if="errors != ''">{{ errors }}</Error>
+        <form @submit.prevent="login">
             <div class="mt-4">
-
+                {{ $t('password') }}
                 <div>
                     <label class="text-gray-700 dark:text-gray-200" for="emailAddress">Email Address</label>
-                    <input id="emailAddress" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                    <input required v-model="user.email" id="emailAddress" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
                 </div>
 
                 <div class="mt-4">
-                    <label class="text-gray-700 dark:text-gray-200" for="password">Password</label>
-                    <input id="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                    <label  class="text-gray-700 dark:text-gray-200" for="password">Password</label>
+                    <input v-model="user.password" required id="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
                 </div>
 
             </div>

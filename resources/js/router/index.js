@@ -1,82 +1,137 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Awards from "../views/Awards.vue";
-import JobOffer from "../views/JobOffer.vue";
-import LogIn from "../views/LogIn.vue";
-import MathematicianDatabase from "../views/MathematicianDatabase.vue";
-import NewEvent from "../views/NewEvent.vue";
-import Thesis from "../views/Thesis.vue";
-import About from "../views/About.vue";
-import Membership from "../views/Membership.vue";
-import SinglePost from '../views/SinglePost.vue'
-import Join from "../views/Join.vue";
-import Account from "../views/Account.vue";
+const Home = () => import ("../views/Home.vue");
+const Awards = () => import ("../views/Awards.vue");
+const JobOffer = () => import ("../views/JobOffer.vue");
+const LogIn = () => import ("../views/LogIn.vue");
+const MathematicianDatabase = () => import ("../views/MathematicianDatabase.vue");
+const NewEvent = () => import ("../views/NewEvent.vue");
+const Thesis = () => import ("../views/Thesis.vue");
+const About = () => import ("../views/About.vue");
+const Membership = () => import ("../views/Membership.vue");
+const SinglePost = () => import ('../views/SinglePost.vue');
+const Join = () => import ("../views/Join.vue");
+const Account = () => import ("../views/Account.vue");
 
+const siteName = "CMU";
 
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: Home
+        component: Home,
+        meta:{
+            title: siteName 
+        }
     },
     {
         path: '/news-events',
         name: 'news-events',
-        component: NewEvent
+        component: NewEvent,
+        meta:{
+            title: siteName + ' - News & Events'
+        }
     },
     {
         path: '/membership',
         name: 'membership',
-        component: Membership
+        component: Membership,
+        meta:{
+            title: siteName + ' - Membership'
+        }
     },
     {
         path: '/cameroon-mathematician-database',
         name: 'cam-math-db',
-        component: MathematicianDatabase
+        component: MathematicianDatabase,
+        meta:{
+            title: siteName + ' - Mathematician Database'
+        }
     },
     {
         path: '/awards',
         name: 'awards',
-        component: Awards
+        component: Awards,
+        meta:{
+            title: siteName + ' - Awards'
+        }
     },
     {
         path: '/thesis',
         name: 'thesis',
-        component: Thesis
+        component: Thesis,
+        meta:{
+            title: siteName + ' - Thesis'
+        }
     },
     {
         path: '/job-offer',
         name: 'job-offer',
-        component: JobOffer
+        component: JobOffer,
+        meta:{
+            title: siteName + ' - Job Offer'
+        }
     },
     {
         path: '/about-cmu',
         name: 'about',
-        component: About
+        component: About,
+        meta:{
+            title: siteName + ' - About'
+        }
     },
     {
         path: '/log-in',
         name: 'log-in',
-        component: LogIn
+        component: LogIn,
+        meta:{
+            title: siteName + ' - Login'
+        }
     },
     {
         path: '/join',
         name: 'join',
-        component: Join
+        component: Join,
+        meta:{
+            title: siteName + ' - Join'
+        }
     },
     {
         path: '/post',
         name: 'single-post',
-        component: SinglePost
+        component: SinglePost,
+        meta:{
+            title: siteName + ' - Post'
+        }
     },
     {
         path: '/account',
         name: 'account',
-        component: Account
+        component: Account,
+        meta:{
+            title: siteName + ' - Account'
+        }
     }
 ];
 
-export default createRouter({
+const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth',
+            }
+        } else  if (savedPosition) {
+            return savedPosition
+          } else {
+            return { top: 0 }
+          }
+    }
 });
+
+router.afterEach((to) => {
+    document.title = to.meta.title;
+});
+
+export default router;

@@ -11,6 +11,8 @@ const Membership = () => import ("../views/Membership.vue");
 const SinglePost = () => import ('../views/SinglePost.vue');
 const Join = () => import ("../views/Join.vue");
 const Account = () => import ("../views/Account.vue");
+const Dashboard = () => import  ("../views/back/Dashboard.vue");
+const LoginAdmin = () => import  ("../views/back/Login.vue");
 
 const siteName = "CMU";
 
@@ -110,7 +112,34 @@ const routes = [
         meta:{
             title: siteName + ' - Account'
         }
-    }
+    },
+
+    // Admin routes
+    {
+        path: '/admin',
+        name: 'admin',
+        component: LoginAdmin,
+        name: 'admin',
+        children: [
+            {
+                path: '',
+                component: LoginAdmin,
+                name: 'admin.login',
+                meta:{
+                    title: siteName + ' - Admin Panel'
+                }
+            },
+            
+            {
+                path: 'dashboard',
+                component: Dashboard,
+                name: 'admin.dash',
+                meta:{
+                    title: siteName + ' - Dashboard'
+                }
+            },
+        ],
+    },
 ];
 
 const router = createRouter({

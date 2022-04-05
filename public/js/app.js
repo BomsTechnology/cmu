@@ -22848,7 +22848,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SwiperSlide"], {
-        "class": "h-[500px] md:h-96 relative"
+        "class": "h-[500px] relative"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
@@ -22870,7 +22870,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* STABLE */
 
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SwiperSlide"], {
-        "class": "h-[500px] md:h-96 relative"
+        "class": "h-[500px] relative"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
@@ -22892,7 +22892,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* STABLE */
 
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SwiperSlide"], {
-        "class": "h-[500px] md:h-96 relative"
+        "class": "h-[500px] relative"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
@@ -23622,6 +23622,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
+var _ref;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 var Home = function Home() {
@@ -23670,6 +23674,14 @@ var Join = function Join() {
 
 var Account = function Account() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_Account_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Account.vue */ "./resources/js/views/Account.vue"));
+};
+
+var Dashboard = function Dashboard() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_Dashboard_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/Dashboard.vue */ "./resources/js/views/back/Dashboard.vue"));
+};
+
+var LoginAdmin = function LoginAdmin() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/Login.vue */ "./resources/js/views/back/Login.vue"));
 };
 
 var siteName = "CMU";
@@ -23757,7 +23769,25 @@ var routes = [{
   meta: {
     title: siteName + ' - Account'
   }
-}];
+}, (_ref = {
+  path: '/admin',
+  name: 'admin',
+  component: LoginAdmin
+}, _defineProperty(_ref, "name", 'admin'), _defineProperty(_ref, "children", [{
+  path: '',
+  component: LoginAdmin,
+  name: 'admin.login',
+  meta: {
+    title: siteName + ' - Admin Panel'
+  }
+}, {
+  path: 'dashboard',
+  component: Dashboard,
+  name: 'admin.dash',
+  meta: {
+    title: siteName + ' - Dashboard'
+  }
+}]), _ref)];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
   routes: routes,
@@ -62492,7 +62522,7 @@ module.exports = JSON.parse('{"lastest":"Recente","fr":"Français","en":"English
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

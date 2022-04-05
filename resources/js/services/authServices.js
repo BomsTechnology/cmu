@@ -48,8 +48,8 @@ export default function useAuth() {
             let response = await axios.post('/api/login-admin', data);
             localStorage.user = JSON.stringify(response.data.data.user);
             localStorage.token = response.data.data.token;
+            location.href = "/admin/dashboard";
             loading.value = 2;
-            router.push({ name: "admin.dash" });
         } catch (e) {
                     loading.value = 0;
                     errors.value = "invalid email or password";

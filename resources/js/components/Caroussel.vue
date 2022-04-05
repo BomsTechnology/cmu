@@ -21,6 +21,7 @@
     :modules="[Navigation, Pagination, A11y, Lazy, Autoplay]"
     navigation
     :pagination="{ clickable: true }"
+    :autoplay="{delay: 2500, disableOnInteraction: false,}"
     grab-cursor
     :preload-images="false"
     lazy

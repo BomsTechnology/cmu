@@ -61,7 +61,7 @@ export default {
         const login = async () => {
                 await loginAdmin({...user});
                 if(errors.value == ''){
-                    router.push({ name: "admin.dash" });
+                    location.href = "/admin/dashboard";
                 }
         };
 
@@ -71,7 +71,7 @@ export default {
 
                 try {
                   let response = await axios.post('/api/verif-admin', {id:u.id});
-                  router.push({ name: "admin.dash" });
+                  location.href = "/admin/dashboard";
                 } catch (e) {
                         errors.value = "Your not a admin";
                 }       

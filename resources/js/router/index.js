@@ -13,6 +13,10 @@ const Join = () => import ("../views/Join.vue");
 const Account = () => import ("../views/Account.vue");
 const Dashboard = () => import  ("../views/back/Dashboard.vue");
 const LoginAdmin = () => import  ("../views/back/Login.vue");
+const PostIndex = () => import  ("../views/back/post/PostIndex.vue");
+const PostCreate = () => import  ("../views/back/post/PostCreate.vue");
+const PostEdit = () => import ("../views/back/post/PostEdit.vue");
+const NotFound = () => import  ("../views/NotFound.vue");
 
 const siteName = "CMU";
 
@@ -113,6 +117,14 @@ const routes = [
             title: siteName + ' - Account'
         }
     },
+    {
+        path: '/:pathMatch(.*)',
+        name: 'not.found',
+        component: NotFound,
+        meta:{
+            title: siteName + ' - Page Introuvable'
+        }
+    },
 
     // Admin routes
     {
@@ -136,6 +148,33 @@ const routes = [
                 name: 'admin.dash',
                 meta:{
                     title: siteName + ' - Dashboard'
+                }
+            },
+            {
+                path: 'post',
+                component: PostIndex,
+                props: true,
+                name: 'admin.post.index',
+                meta:{
+                    title: siteName + ' - Posts'
+                }
+            },
+            {
+                path: 'post/create',
+                component: PostCreate,
+                props: true,
+                name: 'admin.post.create',
+                meta:{
+                    title: siteName + ' - Create Post'
+                }
+            },
+            {
+                path: 'post/edit/:id',
+                component: PostEdit,
+                props: true,
+                name: 'admin.post.edit',
+                meta:{
+                    title: siteName + ' - Edit Post'
                 }
             },
         ],

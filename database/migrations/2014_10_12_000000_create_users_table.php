@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->foreignId('university_id')->constrained();
             $table->rememberToken();
             $table->timestamps();
         });

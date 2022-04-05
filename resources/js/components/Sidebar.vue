@@ -86,7 +86,7 @@
             class="flex flex-col justify-start items-center px-4 border-b border-gray-600 w-full"
         >
             <button
-                @click="open.article = !open.article"
+                @click="open.post = !open.post"
                 class="focus:outline-none focus:text-blue-600 text-left text-white flex justify-between items-center w-full py-2 space-x-14"
             >
                 <p
@@ -96,32 +96,34 @@
                     Post
                 </p>
 
-                <ChevronDownIcon v-if="!open.article" class="w-10 h-10" />
-                <ChevronUpIcon v-if="open.article" class="w-10 h-10" />
+                <ChevronDownIcon v-if="!open.post" class="w-10 h-10" />
+                <ChevronUpIcon v-if="open.post" class="w-10 h-10" />
             </button>
             <div
-                v-if="open.article"
+                v-if="open.post"
                 class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
             >
-                <a href="/admin/post/article"
+                <router-link
+                    :to="{name:'admin.post.index'}"
                     class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
                 >
                     <TableIcon class="w-6 h-6" />
                     <p class="text-base leading-4">All Post</p>
-                </a>
-                <button
+                </router-link>
+                <router-link
+                    :to="{name:'admin.post.create'}"
                     class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
                 >
                     <PlusCircleIcon class="w-6 h-6" />
                     <p class="text-base leading-4">Add Post</p>
-                </button>
+                </router-link>
             </div>
         </div>
         <div
             class="flex flex-col justify-start items-center px-4 border-b border-gray-600 w-full"
         >
             <button
-                @click="open.article = !open.article"
+                @click="open.awards = !open.awards"
                 class="focus:outline-none focus:text-blue-600 text-left text-white flex justify-between items-center w-full py-2 space-x-14"
             >
                 <p
@@ -131,11 +133,11 @@
                     Awards
                 </p>
 
-                <ChevronDownIcon v-if="!open.article" class="w-10 h-10" />
-                <ChevronUpIcon v-if="open.article" class="w-10 h-10" />
+                <ChevronDownIcon v-if="!open.awards" class="w-10 h-10" />
+                <ChevronUpIcon v-if="open.awards" class="w-10 h-10" />
             </button>
             <div
-                v-if="open.article"
+                v-if="open.awards"
                 class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
             >
                 <a href="/admin/post/article"
@@ -156,7 +158,7 @@
             class="flex flex-col justify-start items-center px-4 border-b border-gray-600 w-full"
         >
             <button
-                @click="open.article = !open.article"
+                @click="open.theses = !open.theses"
                 class="focus:outline-none focus:text-blue-600 text-left text-white flex justify-between items-center w-full py-2 space-x-14"
             >
                 <p
@@ -166,11 +168,11 @@
                     Theses
                 </p>
 
-                <ChevronDownIcon v-if="!open.article" class="w-10 h-10" />
-                <ChevronUpIcon v-if="open.article" class="w-10 h-10" />
+                <ChevronDownIcon v-if="!open.theses" class="w-10 h-10" />
+                <ChevronUpIcon v-if="open.theses" class="w-10 h-10" />
             </button>
             <div
-                v-if="open.article"
+                v-if="open.theses"
                 class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
             >
                 <a href="/admin/post/article"
@@ -446,6 +448,9 @@ export default {
             announcement: false,
             university: false,
             job: false,
+            post: false,
+            awards: false,
+            theses: false,
         });
         const loading = ref(0);
 

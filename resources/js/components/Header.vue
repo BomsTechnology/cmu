@@ -1,8 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { UserCircleIcon } from "@heroicons/vue/solid";
 
 //varibles
 const open = ref(false);
+const user = localStorage.user ? JSON.parse(localStorage.user) : '';
+
 
 //functions
 
@@ -16,7 +19,7 @@ const open = ref(false);
                         <a class="text-2xl font-extrabold text-blue-600 transition-colors duration-200 transform dark:text-white md:text-3xl lg:text-5xl hover:text-gray-500 dark:hover:text-gray-300" href="#">CMU</a>
 
                         <!-- Search input on desktop screen -->
-                        <div class="hidden mx-10 md:block">
+                        <div class="hidden mx-10 md:block lg:pl-20">
                             <div class="relative flex">
                                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                                     <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
@@ -32,11 +35,34 @@ const open = ref(false);
                         </div>
 
                         <div class="hidden md:flex items-center py-2 -mx-1 lg:pr-40 md:pr-10 md:mx-0">
-                        <router-link :to="{name:'log-in'}" class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-blue-600 transition-colors border border-blue-600 duration-200 transform bg-white rounded-full hover:bg-blue-600 hover:text-white md:mx-2 md:w-auto" href="#">Login</router-link>
-                        <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700 md:mx-0 md:w-auto" href="#">Giving To CMU</a>
-                        <a class="block  px-3 py-2 mx-1" href="#">
-                        <img class=" w-8" src="/assets/flags/Flag_of_France.svg.png" alt="french-flag">
-                        </a>
+
+
+
+                            <button v-if="user" class="block">
+                                <div class="flex space-x-2 items-center text-white transition-colors duration-200 text-sm bg-primary-blue px-3 py-2 uppercase">
+                                    <span v-if="user.avatar">
+                                        <img :src="user.avatar" alt="">
+                                    </span>
+                                    <UserCircleIcon v-else class="h-14 w-14 text-gray-700"/>
+                                </div>
+                                <!-- <div  class="flex flex-col py-2">
+                                    <a href="#"  @click.prevent="logout()" class="hover:text-white text-menu flex items-center transition-colors duration-200 text-sm hover:bg-primary-blue px-3 py-2 uppercase">
+                                            {{ $t('logout') }}
+                                            <svg v-if="loading == 1" class="animate-spin ml-3  h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                    </a>
+                                </div>            -->
+                            </button>
+
+
+                            <router-link v-else  :to="{name:'log-in'}" class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-blue-600 transition-colors border border-blue-600 duration-200 transform bg-white rounded-full hover:bg-blue-600 hover:text-white md:mx-2 md:w-auto" href="#">Login</router-link>
+                            
+                            <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700 md:mx-0 md:w-auto" href="#">Giving To CMU</a>
+                            <a class="block  px-3 py-2 mx-1" href="#">
+                            <img class=" w-8" src="/assets/flags/Flag_of_France.svg.png" alt="french-flag">
+                            </a>
                     </div>
                     </div>
 

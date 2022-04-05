@@ -90,9 +90,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 if (errors.value == '') {
-                  _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
-                    name: "admin.dash"
-                  });
+                  location.href = "/admin/dashboard";
                 }
 
               case 3:
@@ -129,9 +127,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 5:
                 response = _context2.sent;
-                _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
-                  name: "admin.dash"
-                });
+                location.href = "/admin/dashboard";
                 _context2.next = 12;
                 break;
 

@@ -23725,6 +23725,18 @@ var PostEdit = function PostEdit() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_back_post_PostEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/post/PostEdit.vue */ "./resources/js/views/back/post/PostEdit.vue"));
 };
 
+var MemberIndex = function MemberIndex() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_member_MemberIndex_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/member/MemberIndex.vue */ "./resources/js/views/back/member/MemberIndex.vue"));
+};
+
+var MemberCreate = function MemberCreate() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_member_MemberCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/member/MemberCreate.vue */ "./resources/js/views/back/member/MemberCreate.vue"));
+};
+
+var MemberEdit = function MemberEdit() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_member_MemberEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/member/MemberEdit.vue */ "./resources/js/views/back/member/MemberEdit.vue"));
+};
+
 var NotFound = function NotFound() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_NotFound_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/NotFound.vue */ "./resources/js/views/NotFound.vue"));
 };
@@ -23820,9 +23832,10 @@ var routes = [{
     title: siteName + ' - Post'
   }
 }, {
-  path: '/account',
+  path: '/account/:name/:id',
   name: 'account',
   component: Account,
+  props: true,
   meta: {
     title: siteName + ' - Account'
   }
@@ -23850,6 +23863,30 @@ var routes = [{
   name: 'admin.dash',
   meta: {
     title: siteName + ' - Dashboard'
+  }
+}, {
+  path: 'member',
+  component: MemberIndex,
+  props: true,
+  name: 'admin.member.index',
+  meta: {
+    title: siteName + ' - Member'
+  }
+}, {
+  path: 'member/create',
+  component: MemberCreate,
+  props: true,
+  name: 'admin.member.create',
+  meta: {
+    title: siteName + ' - Create Member'
+  }
+}, {
+  path: 'member/edit/:id',
+  component: MemberEdit,
+  props: true,
+  name: 'admin.member.edit',
+  meta: {
+    title: siteName + ' - Edit Member'
   }
 }, {
   path: 'post',
@@ -62663,7 +62700,7 @@ module.exports = JSON.parse('{"lastest":"Recente","fr":"Français","en":"English
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_back_member_MemberIndex_vue":1,"resources_js_views_back_member_MemberCreate_vue":1,"resources_js_views_back_member_MemberEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

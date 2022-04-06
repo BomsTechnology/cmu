@@ -20,9 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->enum('type', ['member', 'admin']);
             $table->string('field_research');
-            $table->date('thesis_year');
-            $table->string('thesis_country');
-            $table->string('cv_description')->nullable();
+            $table->longText('biography')->nullable();
             $table->string('cv_path');
             $table->string('phone_number');
             $table->string('researchgate_account')->nullable();

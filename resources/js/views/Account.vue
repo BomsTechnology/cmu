@@ -1,20 +1,31 @@
 <script setup>
 import Header from '../components/Header.vue'
-import SubHeader from '../components/SubHeader.vue'
+import { UserCircleIcon } from "@heroicons/vue/solid";
+import { onMounted, ref, computed, toRefs } from "vue";
 import Footer from '../components/Footer.vue';
+import useMembers from "../services/memberServices.js";
+const props = defineProps({
+    id :  String,
+    name: String
+});
+const { getMember2, member, errors, loading } = useMembers();
+onMounted(getMember2(props.id));
+
+
 </script>
 
-<template>
+<template >
 <Header/>
 <div class="md:flex justify-between shadow-lg py-4 md:px-32 px-4">
     <div class="flex md:flex-row flex-col md:w-3/4 justify-center md:justify-start items-center">
-        <img class="object-cover rounded-full md:h-52 md:w-52 h-32 w-32" src="/assets/img_caroussel/img_caroussel1.jpg">
+        <img class="object-cover rounded-full md:h-52 md:w-52 h-32 w-32" v-if="member.avatar" :src="member.avatar">
+        <UserCircleIcon v-else class="md:h-52 md:w-52 h-32 w-32 text-gray-700"/>
         <div class="flex flex-col justify-center items-center md:items-start md:mx-8 py-4">
-            <h1 class="text-gray-700 md:text-2xl font-bold dark:text-gray-300"> Albert Einstein</h1>
-            <h3 class="md:text-md text-sm font-extralight mt-4">Mathematician and Physicist</h3>
+            <h1 class="text-gray-700 md:text-2xl font-bold dark:text-gray-300 capitalize"> {{ member.firstname }} {{ member.lastname }}</h1>
+            <h3 class="md:text-md text-sm font-extralight mt-4">{{ member.field_research }}</h3>
             <h4 class="md:text-sm text-xs mt-4">
-                <span>Germany</span>
-                <span class="ml-4">@alberteinstein</span>
+                <span>{{ member.university.name }}</span>
+                <span class="ml-4">@alberteinstein </span>
             </h4>
         </div>
     </div>
@@ -30,9 +41,8 @@ import Footer from '../components/Footer.vue';
         <h1 class="font-extrabold text-2xl text-gray-700">Auto-Biography & CV</h1>
     </div>
     <div class="p-6">
-    <p class="mt-2 text-sm md:p-10 text-gray-600 dark:text-gray-400 leading-loose">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore sam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis. <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore sam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis.
+    <p class="mt-2 text-sm md:p-6 text-gray-600 dark:text-gray-400 leading-loose">
+        {{ member.biography }}
     </p>
     </div>
 </div>
@@ -42,7 +52,7 @@ import Footer from '../components/Footer.vue';
         <h1 class="font-extrabold text-2xl text-gray-700">Publications</h1>
     </div>
 
-            <div class="h-full py-4">
+            <!-- <div class="h-full py-4">
                 <div class="w-full md:h-28 md:flex justify-between shadow-md border">
                    <img src="/assets/img_caroussel/img_caroussel3.jpg" class="md:w-32 md:h-full object-cover w-full h-24" alt="">
                    <div class="p-2 w-full text-center md:text-left">
@@ -52,7 +62,7 @@ import Footer from '../components/Footer.vue';
                    </div>
                    <div class="px-1 h-full bg-gray-400 w-1 md:block hidden">&nbsp;</div>
                 </div>   
-            </div>
+            </div> -->
     </div>
     </div>
 
@@ -87,7 +97,7 @@ import Footer from '../components/Footer.vue';
         <h1 class="font-extrabold text-2xl text-gray-700">Supervision</h1>
     </div>
 
-            <div class="py-4">
+            <!-- <div class="py-4">
                 <div class="w-full md:h-28 md:flex justify-between shadow-md border">
                    <div class="p-2 w-full text-center md:text-left">
                        <h3 class="text-md font-bold">ETA CYRIL</h3>
@@ -95,7 +105,7 @@ import Footer from '../components/Footer.vue';
                            <p class="text-sm font-light mt-2">University of Douala - 2021</p>
                    </div>
                 </div>   
-            </div>
+            </div> -->
     </div>
     </div>
 </div>

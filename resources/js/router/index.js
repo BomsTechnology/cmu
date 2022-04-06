@@ -16,6 +16,9 @@ const LoginAdmin = () => import  ("../views/back/Login.vue");
 const PostIndex = () => import  ("../views/back/post/PostIndex.vue");
 const PostCreate = () => import  ("../views/back/post/PostCreate.vue");
 const PostEdit = () => import ("../views/back/post/PostEdit.vue");
+const MemberIndex = () => import  ("../views/back/member/MemberIndex.vue");
+const MemberCreate = () => import  ("../views/back/member/MemberCreate.vue");
+const MemberEdit = () => import ("../views/back/member/MemberEdit.vue");
 const NotFound = () => import  ("../views/NotFound.vue");
 const UniversityIndex = () => import  ("../views/back/university/UniversityIndex.vue");
 const UniversityCreate = () => import  ("../views/back/university/UniversityCreate.vue");
@@ -113,9 +116,10 @@ const routes = [
         }
     },
     {
-        path: '/account',
+        path: '/account/:name/:id',
         name: 'account',
         component: Account,
+        props: true,
         meta:{
             title: siteName + ' - Account'
         }
@@ -151,6 +155,33 @@ const routes = [
                 name: 'admin.dash',
                 meta:{
                     title: siteName + ' - Dashboard'
+                }
+            },
+            {
+                path: 'member',
+                component: MemberIndex,
+                props: true,
+                name: 'admin.member.index',
+                meta:{
+                    title: siteName + ' - Member'
+                }
+            },
+            {
+                path: 'member/create',
+                component: MemberCreate,
+                props: true,
+                name: 'admin.member.create',
+                meta:{
+                    title: siteName + ' - Create Member'
+                }
+            },
+            {
+                path: 'member/edit/:id',
+                component: MemberEdit,
+                props: true,
+                name: 'admin.member.edit',
+                meta:{
+                    title: siteName + ' - Edit Member'
                 }
             },
             {

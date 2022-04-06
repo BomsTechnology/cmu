@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\MemberController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\UniversityController;
 use Illuminate\Http\Request;
@@ -23,6 +24,9 @@ Route::post("/login-admin",[AuthController::class,'login_admin']);
 Route::post("/verif-admin",[AuthController::class,'verif_admin']);
 
 Route::group(['middleware' => ['auth:sanctum']], function(){
+
+    Route::apiResource('members', MemberController::class);
+    Route::get("/members2/{member}", [MemberController::class,'show2']);
 
     Route::post("/logout",[AuthController::class,'logout']);
 

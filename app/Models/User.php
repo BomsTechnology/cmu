@@ -18,7 +18,18 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
+        'type',
+        'field_research',
+        'thesis_year',
+        'thesis_country',
+        'cv_description',
+        'cv_path',
+        'phone_number',
+        'researchgate_account',
+        'avatar',
+        'university_id',
         'email',
         'password',
     ];
@@ -41,4 +52,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+
+    public function university(){
+        return $this->belongsTo(University::class);
+    }
 }

@@ -2,35 +2,33 @@
 import { onMounted, ref, computed } from "vue";
 import Sidebar from "../../../components/Sidebar.vue";
 import { PlusCircleIcon } from "@heroicons/vue/solid";
-import usePosts from "../../../services/postServices.js";
+import useUniversities from "../../../services/universityServices.js";
 import Error from "../../../components/Error.vue";
-  
-        const { posts, getPosts, destroyPost, loading, errors } =
-            usePosts();
+
+    const { universities, getUniversities, destroyUniversity, loading, errors } =
+            useUniversities();
         const searchKey = ref("");
 
-        onMounted(getPosts());
+        onMounted(getUniversities());
 
-        const deletePost = async (id) => {
+        const deleteUniversity = async (id) => {
             if(confirm("I you Sure ?")){
-                await destroyPost(id)
+                await destroyUniversity(id)
                 if(errors.value == ''){
-                    await getPosts();
+                    await getUniversities();
                 }
             }
         };
 
-
-        const filteredPost = computed({
-        get() { return posts.value.filter((post) => {
-                return post.title
+    const filteredUniversity = computed({
+        get() { return universities.value.filter((university) => {
+                return university.name
                     .toLowerCase()
                     .includes(searchKey.value.toLowerCase());
             })},
         set(val) { searchKey.value = val }
 
     })
-    
 
 </script>
 
@@ -42,17 +40,17 @@ import Error from "../../../components/Error.vue";
                 class=" w-full z-0 h-full p-4"
             >
                 <div class="px-8 py-5 bg-white shadow-lg flex justify-between">
-                    <h1 class="text-4xl text-gray-700 font-bold capitalize">
-                        Post
+                    <h1 class="text-4xl text-primary-blue font-bold capitalize">
+                        University
                     </h1>
                     <router-link
                         :to="{
-                            name: 'admin.post.create',
+                            name: 'admin.university.create',
                         }"
                         class="flex justify-start items-center space-x-3 text-white bg-blue-600 rounded px-3 py-2"
                     >
                         <PlusCircleIcon class="w-6 h-6" />
-                        <p class="text-base leading-4">Add Post</p>
+                        <p class="text-base leading-4">Add University</p>
                     </router-link>
                 </div>
 
@@ -101,25 +99,7 @@ import Error from "../../../components/Error.vue";
                                                 scope="col"
                                                 class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                                             >
-                                                Image
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-                                            >
-                                                User
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-                                            >
-                                                Title
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-                                            >
-                                                Content
+                                                Name
                                             </th>
                                             <th scope="col" class="p-4">
                                                 <span class="sr-only"
@@ -130,44 +110,28 @@ import Error from "../../../components/Error.vue";
                                     </thead>
                                     <tbody
                                         class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
-                                        v-if="filteredPost.length != 0"
+                                        v-if="filteredUniversity.length != 0"
                                     >
                                         <tr
-                                            v-for="post in filteredPost"
-                                            :key="post.id"
+                                            v-for="university in filteredUniversity"
+                                            :key="university.id"
                                             class="hover:bg-gray-100 dark:hover:bg-gray-700"
                                         >
                                             <td
                                                 class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                                             >
-                                                <img :src="post.image" alt="" class="w-16 rounded-full h-16 object-cover">
+                                                {{ university.name }}
                                             </td>
-                                            <td
-                                                class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                                            >
-                                                {{ post.user.firstname }}
-                                            </td>
-                                            <td
-                                                class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                                            >
-                                                {{ post.title }}   
-                                            </td>
-                                            <td
-                                                class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                                            >
-                                                {{ post.content.substring(0, 19) + "..." }}
-                                            </td>
-                                            
                                            <td
                                                 class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap"
                                             >
-                                                <router-link :to="{name:'admin.post.edit', params: {id: post.id }}"
+                                                <router-link :to="{name:'admin.university.edit', params: {id: university.id }}"
                                                     href="#"
-                                                    class="text-blue-600 dark:text-blue-500 hover:underline"
+                                                    class="text-primary-blue dark:text-blue-500 hover:underline"
                                                     >Edit</router-link
                                                 >
                                                 <a
-                                                    @click="deletePost(post.id)"
+                                                    @click="deleteUniversity(university.id)"
                                                     href="#"
                                                     class="text-red-600 ml-3 dark:text-blue-500 hover:underline"
                                                     >Delete</a
@@ -204,7 +168,7 @@ import Error from "../../../components/Error.vue";
                                                 colspan="7"
                                                 class="py-4 px-6 text-xl font-medium text-gray-900 text-center whitespace-nowrap uppercase"
                                             >
-                                                NO POST
+                                                NO UNIVERSITY
                                             </td>
                                         </tr>
                                     </tbody>
@@ -217,5 +181,3 @@ import Error from "../../../components/Error.vue";
         </div>
     </div>
 </template>
-
-

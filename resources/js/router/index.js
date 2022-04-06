@@ -17,6 +17,9 @@ const PostIndex = () => import  ("../views/back/post/PostIndex.vue");
 const PostCreate = () => import  ("../views/back/post/PostCreate.vue");
 const PostEdit = () => import ("../views/back/post/PostEdit.vue");
 const NotFound = () => import  ("../views/NotFound.vue");
+const UniversityIndex = () => import  ("../views/back/university/UniversityIndex.vue");
+const UniversityCreate = () => import  ("../views/back/university/UniversityCreate.vue");
+const UniversityEdit = () => import  ("../views/back/university/UniversityEdit.vue");
 
 const siteName = "CMU";
 
@@ -175,6 +178,31 @@ const routes = [
                 name: 'admin.post.edit',
                 meta:{
                     title: siteName + ' - Edit Post'
+                }
+            },
+            {
+                path: 'university',
+                component: UniversityIndex,
+                name: 'admin.university.index',
+                meta:{
+                    title: siteName + ' - University'
+                }
+            },
+            {
+                path: 'university/create',
+                component: UniversityCreate,
+                name: 'admin.university.create',
+                meta:{
+                    title: siteName + ' - Create University'
+                }
+            },
+            {
+                path: 'university/edit/:id',
+                component: UniversityEdit,
+                props: true,
+                name: 'admin.university.edit',
+                meta:{
+                    title: siteName + ' - Edit University'
                 }
             },
         ],

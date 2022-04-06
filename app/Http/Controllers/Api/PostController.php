@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PostResource;
+use App\Http\Resources\PostResource2;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return PostResource::collection(Post::latest()->get());
     }
 
     /**
@@ -26,7 +28,30 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fileds = $request->validate([
+            'title' => 'required|string|between:1,50',
+            'content' => 'required|string',
+            'user_id' => 'integer|required',
+        ]);
+
+        $data = [
+            'title' => $fileds['title'],
+            'content' => $fileds['content'],
+            'user_id' => $fileds['user_id'],
+        ];
+
+        if($request->file('image')){
+            $request->validate([
+                'image' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
+            ]);
+            $filename = '/uploads/'.time().'.'. $request->file('image')->extension();
+            $request->file('image')->storePubliclyAs('public', $filename);
+            $data['image'] = $filename;
+        }
+      
+    $post = Post::create($data);
+   
+    return new PostResource($post);
     }
 
     /**
@@ -37,7 +62,11 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return new PostResource($post);
+    }
+    public function show2(Post $post)
+    {
+        return new PostResource2($post);
     }
 
     /**
@@ -49,7 +78,27 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $fileds = $request->validate([
+            'title' => 'required|string|between:1,50',
+            'content' => 'required|string',
+        ]);
+
+        $data = [
+            'title' => $fileds['title'],
+            'content' => $fileds['content'],
+        ];
+
+        if($request->file('image')){
+            $request->validate([
+                'image' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
+            ]);
+            $filename = '/uploads/'.time().'.'. $request->file('image')->extension();
+            $request->file('image')->storePubliclyAs('public', $filename);
+            $data['image'] = $filename;
+        }
+
+        $post->update($data);
+        return new PostResource($post);
     }
 
     /**
@@ -60,6 +109,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return response()->noContent();
     }
 }

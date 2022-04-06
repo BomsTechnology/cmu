@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UniversityRequest;
+use App\Http\Resources\UniversityResource;
 use App\Models\University;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,7 @@ class UniversityController extends Controller
      */
     public function index()
     {
-        //
+        return UniversityResource::collection(University::latest()->get());
     }
 
     /**
@@ -24,9 +26,10 @@ class UniversityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UniversityRequest $request)
     {
-        //
+        $university = University::create($request->validated());
+        return new UniversityResource($university);
     }
 
     /**
@@ -37,7 +40,7 @@ class UniversityController extends Controller
      */
     public function show(University $university)
     {
-        //
+        return new UniversityResource($university);
     }
 
     /**
@@ -47,9 +50,10 @@ class UniversityController extends Controller
      * @param  \App\Models\University  $university
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, University $university)
+    public function update(UniversityRequest $request, University $university)
     {
-        //
+        $university->update($request->validated());
+        return new UniversityResource($university);
     }
 
     /**
@@ -60,6 +64,8 @@ class UniversityController extends Controller
      */
     public function destroy(University $university)
     {
-        //
+        $university->delete();
+
+        return response()->noContent();
     }
 }

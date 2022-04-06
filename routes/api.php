@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\UniversityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,5 +23,12 @@ Route::post("/login-admin",[AuthController::class,'login_admin']);
 Route::post("/verif-admin",[AuthController::class,'verif_admin']);
 
 Route::group(['middleware' => ['auth:sanctum']], function(){
-    Route::post("/logout",[AuthController::class,'logout']);;
+
+    Route::post("/logout",[AuthController::class,'logout']);
+
+    Route::apiResource('universities', UniversityController::class);
+    
+    Route::apiResource('posts', PostController::class);
+    Route::get("/posts2/{post}", [PostController::class,'show2']);
+    Route::get("/posts-user/{user}",[PostController::class,'post_user']);
 });

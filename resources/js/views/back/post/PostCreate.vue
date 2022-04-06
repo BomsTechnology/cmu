@@ -1,44 +1,40 @@
 <script setup>
-import Sidebar from "../../../components/Sidebar.vue";
-import { reactive, ref, onMounted } from "vue";
-import Error from "../../../components/Error.vue";
-// import useUniversities from "../../../services/postServices.js";
+    import Sidebar from "../../../components/Sidebar.vue";
+    import { reactive, ref, onMounted } from "vue";
+    import Error from "../../../components/Error.vue";
+    import usePosts from "../../../services/postServices.js";
 
-import router from "../../../router/index.js";
+    import router from "../../../router/index.js";
+    const user = JSON.parse(localStorage.user);
 
-        // onMounted(
+    const post = reactive({
+        title: "",
+        content: "",
+        image: "",
+        user_id: user.id,
+    });
+    const { createPost, errors, loading } = usePosts();
 
-        // );
-        const post = reactive({
-            name: "",
-            description: "",
-            image: "",
-            continent_id: 1,
-            country_id: 1,
-            city_id: 1,
+    const storePost = async () => {
+        let formData = new FormData();
+        formData.append("image", post.image);
+        formData.append("title", post.title);
+        formData.append("content", post.content);
+        formData.append("user_id", post.user_id);
+
+
+        await createPost(formData);
+        router.push({
+            name: "admin.post.index",
         });
-        // const { createpost, errors, loading } = useUniversities();
 
-        // const storepost = async () => {
-        //     let formData = new FormData();
-        //     formData.append("image", post.image);
-        //     formData.append("name", post.name);
-        //     formData.append("description", post.description);
-        //     formData.append("continent_id", post.continent_id);
-        //     formData.append("country_id", post.country_id);
-        //     formData.append("city_id", post.city_id);
+    };
 
-        //     await createpost(formData);
-        //     router.push({
-        //         name: "admin.post.index",
-        //     });
-
-        // };
-
-    // const handelFileObject = () => {
-    //     this.post.image = this.$refs.file.files[0];
-    //     console.log(this.post);
-    // };
+    const file =  ref(null);
+    const handelFileObject = () => {
+        post.image = file.value.files[0];
+        console.log(post);
+    };
 
 </script>
 
@@ -50,7 +46,7 @@ import router from "../../../router/index.js";
                 <div
                     class="px-8 py-5 bg-white shadow-lg flex w-full justify-between"
                 >
-                    <h1 class="text-4xl text-primary-blue font-bold capitalize">
+                    <h1 class="text-4xl text-gray-700 font-bold capitalize">
                         Add post
                     </h1>
                 </div>
@@ -61,18 +57,18 @@ import router from "../../../router/index.js";
                         Add a new post
                     </h2>
                     <form
-                        @submit.prevent="storepost()"
+                        @submit.prevent="storePost()"
                         id="postform"
                         enctype="multipart/form-data"
                     >
                         <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                             <div class="col-span-2">
                                 <label class="text-gray-700 dark:text-gray-200"
-                                    >Name</label
+                                    >Title</label
                                 >
                                 <input
                                     required
-                                    v-model="post.name"
+                                    v-model="post.title"
                                     type="text"
                                     class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                 />
@@ -98,14 +94,14 @@ import router from "../../../router/index.js";
                                 <label
                                     class="text-gray-700 dark:text-gray-200"
                                     for="pt"
-                                    >Description</label
+                                    >Content</label
                                 >
                                 <textarea
                                     required
                                     type="text"
-                                    v-model="post.description"
+                                    v-model="post.content"
                                     id="pt"
-                                    class="block w-full px-4 py-2 h-32 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:ring-primary-blue focus:border-primary-blue focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                    class="block w-full px-4 py-2 h-32 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:ring-blue-600 focus:border-blue-600 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                 >
                                 </textarea>
                             </div>
@@ -115,7 +111,7 @@ import router from "../../../router/index.js";
                             <button
                                 v-if="loading == 0"
                                 type="submit"
-                                class="px-6 py-2 leading-5 text-white rounded blue-600 focus:outline-none"
+                                class="px-6 py-2 leading-5 bg-blue-600 text-white rounded blue-600 focus:outline-none"
                             >
                                 Save
                             </button>

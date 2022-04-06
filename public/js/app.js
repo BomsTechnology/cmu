@@ -23729,6 +23729,18 @@ var NotFound = function NotFound() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_NotFound_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/NotFound.vue */ "./resources/js/views/NotFound.vue"));
 };
 
+var UniversityIndex = function UniversityIndex() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_university_UniversityIndex_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/university/UniversityIndex.vue */ "./resources/js/views/back/university/UniversityIndex.vue"));
+};
+
+var UniversityCreate = function UniversityCreate() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_university_UniversityCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/university/UniversityCreate.vue */ "./resources/js/views/back/university/UniversityCreate.vue"));
+};
+
+var UniversityEdit = function UniversityEdit() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_university_UniversityEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/university/UniversityEdit.vue */ "./resources/js/views/back/university/UniversityEdit.vue"));
+};
+
 var siteName = "CMU";
 var routes = [{
   path: '/',
@@ -23862,6 +23874,28 @@ var routes = [{
   name: 'admin.post.edit',
   meta: {
     title: siteName + ' - Edit Post'
+  }
+}, {
+  path: 'university',
+  component: UniversityIndex,
+  name: 'admin.university.index',
+  meta: {
+    title: siteName + ' - University'
+  }
+}, {
+  path: 'university/create',
+  component: UniversityCreate,
+  name: 'admin.university.create',
+  meta: {
+    title: siteName + ' - Create University'
+  }
+}, {
+  path: 'university/edit/:id',
+  component: UniversityEdit,
+  props: true,
+  name: 'admin.university.edit',
+  meta: {
+    title: siteName + ' - Edit University'
   }
 }]), _ref)];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
@@ -62629,7 +62663,7 @@ module.exports = JSON.parse('{"lastest":"Recente","fr":"Français","en":"English
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_NotFound_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

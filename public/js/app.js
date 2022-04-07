@@ -22690,11 +22690,13 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose;
     expose();
     var open = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
-    var user = localStorage.user ? JSON.parse(localStorage.user) : ''; //functions
+    var user = localStorage.user ? JSON.parse(localStorage.user) : '';
+    var currentDate = new Date().getFullYear(); //functions
 
     var __returned__ = {
       open: open,
       user: user,
+      currentDate: currentDate,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
       UserCircleIcon: _heroicons_vue_solid__WEBPACK_IMPORTED_MODULE_1__["default"]
     };
@@ -23268,7 +23270,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
-      name: 'news-events'
+      name: 'news-events',
+      params: {
+        year: $setup.currentDate
+      }
     },
     "class": "my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0",
     href: "#"
@@ -23279,7 +23284,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }, 8
+  /* PROPS */
+  , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
       name: 'membership'
     },
@@ -23384,7 +23391,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
-      name: 'news-events'
+      name: 'news-events',
+      params: {
+        year: $setup.currentDate
+      }
     },
     "class": "my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700",
     href: "#"
@@ -23395,7 +23405,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }, 8
+  /* PROPS */
+  , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
       name: 'membership'
     },
@@ -23753,6 +23765,30 @@ var UniversityEdit = function UniversityEdit() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_back_university_UniversityEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/university/UniversityEdit.vue */ "./resources/js/views/back/university/UniversityEdit.vue"));
 };
 
+var ActivityIndex = function ActivityIndex() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_activity_ActivityIndex_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/activity/ActivityIndex.vue */ "./resources/js/views/back/activity/ActivityIndex.vue"));
+};
+
+var ActivityCreate = function ActivityCreate() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_activity_ActivityCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/activity/ActivityCreate.vue */ "./resources/js/views/back/activity/ActivityCreate.vue"));
+};
+
+var ActivityEdit = function ActivityEdit() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_activity_ActivityEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/activity/ActivityEdit.vue */ "./resources/js/views/back/activity/ActivityEdit.vue"));
+};
+
+var JobIndex = function JobIndex() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_job_JobIndex_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/job/JobIndex.vue */ "./resources/js/views/back/job/JobIndex.vue"));
+};
+
+var JobCreate = function JobCreate() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_job_JobCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/job/JobCreate.vue */ "./resources/js/views/back/job/JobCreate.vue"));
+};
+
+var JobEdit = function JobEdit() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_job_JobEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/job/JobEdit.vue */ "./resources/js/views/back/job/JobEdit.vue"));
+};
+
 var siteName = "CMU";
 var routes = [{
   path: '/',
@@ -23762,8 +23798,9 @@ var routes = [{
     title: siteName
   }
 }, {
-  path: '/news-events',
+  path: '/news-events/:year',
   name: 'news-events',
+  props: true,
   component: NewEvent,
   meta: {
     title: siteName + ' - News & Events'
@@ -23933,6 +23970,50 @@ var routes = [{
   name: 'admin.university.edit',
   meta: {
     title: siteName + ' - Edit University'
+  }
+}, {
+  path: 'activity',
+  component: ActivityIndex,
+  name: 'admin.activity.index',
+  meta: {
+    title: siteName + ' - Activity'
+  }
+}, {
+  path: 'activity/create',
+  component: ActivityCreate,
+  name: 'admin.activity.create',
+  meta: {
+    title: siteName + ' - Create Activity'
+  }
+}, {
+  path: 'activity/edit/:id',
+  component: ActivityEdit,
+  props: true,
+  name: 'admin.activity.edit',
+  meta: {
+    title: siteName + ' - Edit Activity'
+  }
+}, {
+  path: 'job-offer',
+  component: JobIndex,
+  name: 'admin.job.index',
+  meta: {
+    title: siteName + ' - Job'
+  }
+}, {
+  path: 'job-offer/create',
+  component: JobCreate,
+  name: 'admin.job.create',
+  meta: {
+    title: siteName + ' - Create Job'
+  }
+}, {
+  path: 'job-offer/edit/:id',
+  component: JobEdit,
+  props: true,
+  name: 'admin.job.edit',
+  meta: {
+    title: siteName + ' - Edit Job'
   }
 }]), _ref)];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
@@ -62700,7 +62781,7 @@ module.exports = JSON.parse('{"lastest":"Recente","fr":"Français","en":"English
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_back_member_MemberIndex_vue":1,"resources_js_views_back_member_MemberCreate_vue":1,"resources_js_views_back_member_MemberEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_back_member_MemberIndex_vue":1,"resources_js_views_back_member_MemberCreate_vue":1,"resources_js_views_back_member_MemberEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1,"resources_js_views_back_activity_ActivityIndex_vue":1,"resources_js_views_back_activity_ActivityCreate_vue":1,"resources_js_views_back_activity_ActivityEdit_vue":1,"resources_js_views_back_job_JobIndex_vue":1,"resources_js_views_back_job_JobCreate_vue":1,"resources_js_views_back_job_JobEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

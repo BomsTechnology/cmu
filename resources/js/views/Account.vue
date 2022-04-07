@@ -9,14 +9,14 @@ const props = defineProps({
     name: String
 });
 const { getMember2, member, errors, loading } = useMembers();
-onMounted(getMember2(props.id));
+onMounted( getMember2(props.id) );
 
 
 </script>
 
-<template >
+<template>
 <Header/>
-<div class="md:flex justify-between shadow-lg py-4 md:px-32 px-4">
+<div class="md:flex justify-between shadow py-4 md:px-32 px-4">
     <div class="flex md:flex-row flex-col md:w-3/4 justify-center md:justify-start items-center">
         <img class="object-cover rounded-full md:h-52 md:w-52 h-32 w-32" v-if="member.avatar" :src="member.avatar">
         <UserCircleIcon v-else class="md:h-52 md:w-52 h-32 w-32 text-gray-700"/>
@@ -25,7 +25,7 @@ onMounted(getMember2(props.id));
             <h3 class="md:text-md text-sm font-extralight mt-4">{{ member.field_research }}</h3>
             <h4 class="md:text-sm text-xs mt-4">
                 <span>{{ member.university.name }}</span>
-                <span class="ml-4">@alberteinstein </span>
+                <span class="ml-4 text-blue-500 hover:underline">@researchgateaccount </span>
             </h4>
         </div>
     </div>
@@ -36,7 +36,7 @@ onMounted(getMember2(props.id));
 <!-- cv -->
 <div class="lg:flex">
     <div class="lg:w-[95%]">
-        <div class="shadow-lg my-6 mx-2">
+        <div class="shadow my-6 mx-2">
     <div class="border-0 border-b-2 p-4">
         <h1 class="font-extrabold text-2xl text-gray-700">Auto-Biography & CV</h1>
     </div>
@@ -47,7 +47,7 @@ onMounted(getMember2(props.id));
     </div>
 </div>
 <!-- publications -->
-<div class="shadow-lg my-6 mx-2 px-4">
+<div class="shadow my-6 mx-2 px-4">
     <div class="border-0 border-b-2 p-4">
         <h1 class="font-extrabold text-2xl text-gray-700">Publications</h1>
     </div>
@@ -67,7 +67,7 @@ onMounted(getMember2(props.id));
     </div>
 
     <div>
-        <div class="shadow-lg my-6 mx-2 px-4">
+        <div class="shadow my-6 mx-2 px-4">
     <div class="border-0 border-b-2 p-4">
         <h1 class="font-extrabold text-2xl text-gray-700">Thesis or Dissertation</h1>
     </div>
@@ -92,7 +92,7 @@ onMounted(getMember2(props.id));
                        </div>
             </div>
     </div>
-        <div class="shadow-lg my-6 mx-2 px-4">
+        <div class="shadow my-6 mx-2 px-4">
     <div class="border-0 border-b-2 p-4">
         <h1 class="font-extrabold text-2xl text-gray-700">Supervision</h1>
     </div>

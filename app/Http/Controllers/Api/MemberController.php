@@ -113,7 +113,6 @@ class MemberController extends Controller
             'researchgate_account' => 'required|string',
             'university_id' => 'required|string',
             'email' => 'required|string',
-            'password' => 'required|string',
         ]);
 
         $data = [
@@ -126,7 +125,6 @@ class MemberController extends Controller
             'researchgate_account' => $fileds['researchgate_account'],
             'university_id' => $fileds['university_id'],
             'email' => $fileds['email'],
-            'password' => Hash::make($fileds['password']),
         ];
 
         if($request->file('cv_path')){
@@ -146,6 +144,7 @@ class MemberController extends Controller
             $request->file('avatar')->storePubliclyAs('public', $filename);
             $data['avatar'] = $filename;
         }
+
         $user = User::find($user);
         $user->update($data);
     

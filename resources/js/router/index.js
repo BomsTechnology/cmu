@@ -23,6 +23,12 @@ const NotFound = () => import  ("../views/NotFound.vue");
 const UniversityIndex = () => import  ("../views/back/university/UniversityIndex.vue");
 const UniversityCreate = () => import  ("../views/back/university/UniversityCreate.vue");
 const UniversityEdit = () => import  ("../views/back/university/UniversityEdit.vue");
+const ActivityIndex = () => import  ("../views/back/activity/ActivityIndex.vue");
+const ActivityCreate = () => import  ("../views/back/activity/ActivityCreate.vue");
+const ActivityEdit = () => import  ("../views/back/activity/ActivityEdit.vue");
+const JobIndex = () => import  ("../views/back/job/JobIndex.vue");
+const JobCreate = () => import  ("../views/back/job/JobCreate.vue");
+const JobEdit = () => import  ("../views/back/job/JobEdit.vue");
 
 const siteName = "CMU";
 
@@ -36,8 +42,9 @@ const routes = [
         }
     },
     {
-        path: '/news-events',
+        path: '/news-events/:year',
         name: 'news-events',
+        props: true,
         component: NewEvent,
         meta:{
             title: siteName + ' - News & Events'
@@ -234,6 +241,56 @@ const routes = [
                 name: 'admin.university.edit',
                 meta:{
                     title: siteName + ' - Edit University'
+                }
+            },
+            {
+                path: 'activity',
+                component: ActivityIndex,
+                name: 'admin.activity.index',
+                meta:{
+                    title: siteName + ' - Activity'
+                }
+            },
+            {
+                path: 'activity/create',
+                component: ActivityCreate,
+                name: 'admin.activity.create',
+                meta:{
+                    title: siteName + ' - Create Activity'
+                }
+            },
+            {
+                path: 'activity/edit/:id',
+                component: ActivityEdit,
+                props: true,
+                name: 'admin.activity.edit',
+                meta:{
+                    title: siteName + ' - Edit Activity'
+                }
+            },
+            {
+                path: 'job-offer',
+                component: JobIndex,
+                name: 'admin.job.index',
+                meta:{
+                    title: siteName + ' - Job'
+                }
+            },
+            {
+                path: 'job-offer/create',
+                component: JobCreate,
+                name: 'admin.job.create',
+                meta:{
+                    title: siteName + ' - Create Job'
+                }
+            },
+            {
+                path: 'job-offer/edit/:id',
+                component: JobEdit,
+                props: true,
+                name: 'admin.job.edit',
+                meta:{
+                    title: siteName + ' - Edit Job'
                 }
             },
         ],

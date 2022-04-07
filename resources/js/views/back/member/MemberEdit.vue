@@ -26,7 +26,6 @@
         formData.append("email", member.value.email);
         formData.append("cv_path", member.value.cv_path);
         formData.append("avatar", member.value.avatar);
-        formData.append("password", member.value.password);
         formData.append("biography", member.value.biography);
         formData.append("university_id", member.value.university_id);
         formData.append("field_research", member.value.field_research);
@@ -35,7 +34,7 @@
         formData.append("researchgate_account", member.value.researchgate_account);
         formData.append('_method', 'PUT');
 
-        await updateMember(formData, id.value);
+        await updateMember(formData);
         if(errors.value == ''){
         router.push({
             name: "admin.member.index",
@@ -45,11 +44,11 @@
 
     const avatar =  ref(null);
     const handelAvatarObject = () => {
-        member.avatar = avatar.value.files[0];
+        member.value.avatar = avatar.value.files[0];
     };
     const cv =  ref(null);
     const handelCvObject = () => {
-        member.cv_path = cv.value.files[0];
+        member.value.cv_path = cv.value.files[0];
     };
 
 </script>

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\ActivityController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\JobOfferController;
 use App\Http\Controllers\Api\MemberController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\UniversityController;
@@ -27,6 +29,12 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
 
     Route::apiResource('members', MemberController::class);
     Route::get("/members2/{member}", [MemberController::class,'show2']);
+
+    Route::apiResource('jobOffers', JobOfferController::class);
+
+    Route::apiResource('activities', ActivityController::class);
+
+    Route::get("/activities-front/{year}", [ActivityController::class,'get_by_year']);
 
     Route::post("/logout",[AuthController::class,'logout']);
 

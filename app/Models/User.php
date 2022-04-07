@@ -55,6 +55,15 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+
+    public function activities(){
+        return $this->hasMany(Post::class);
+    }
+
+    public function job_offers(){
+        return $this->hasMany(Post::class);
+    }
+
     public function university(){
         return $this->belongsTo(University::class);
     }

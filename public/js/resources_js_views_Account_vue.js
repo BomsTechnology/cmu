@@ -88,7 +88,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "md:flex justify-between shadow-lg py-4 md:px-32 px-4"
+  "class": "md:flex justify-between shadow py-4 md:px-32 px-4"
 };
 var _hoisted_2 = {
   "class": "flex md:flex-row flex-col md:w-3/4 justify-center md:justify-start items-center"
@@ -108,8 +108,8 @@ var _hoisted_7 = {
 };
 
 var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "ml-4"
-}, "@alberteinstein ", -1
+  "class": "ml-4 text-blue-500 hover:underline"
+}, "@researchgateaccount ", -1
 /* HOISTED */
 );
 
@@ -128,7 +128,7 @@ var _hoisted_11 = {
   "class": "lg:w-[95%]"
 };
 var _hoisted_12 = {
-  "class": "shadow-lg my-6 mx-2"
+  "class": "shadow my-6 mx-2"
 };
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -147,7 +147,7 @@ var _hoisted_15 = {
 };
 
 var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "shadow-lg my-6 mx-2 px-4"
+  "class": "shadow my-6 mx-2 px-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "border-0 border-b-2 p-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
@@ -156,7 +156,7 @@ var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><div class=\"shadow-lg my-6 mx-2 px-4\"><div class=\"border-0 border-b-2 p-4\"><h1 class=\"font-extrabold text-2xl text-gray-700\">Thesis or Dissertation</h1></div><div class=\"py-4\"><p class=\"text-sm font-light text-center\">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p><p class=\"text-sm font-light mt-2 text-center\">University of Douala - 2021</p><div class=\"flex text-xs font-light text-blue-600 mt-3 justify-center space-x-6 text-center\"><a href=\"#\" class=\"flex items-center hover:underline\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5 mr-1\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path d=\"M10 12a2 2 0 100-4 2 2 0 000 4z\"></path><path fill-rule=\"evenodd\" d=\"M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z\" clip-rule=\"evenodd\"></path></svg><span>View</span></a><a href=\"#\" class=\"flex items-center hover:underline\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5 mr-1\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z\" clip-rule=\"evenodd\"></path></svg><span>Download</span></a></div></div></div><div class=\"shadow-lg my-6 mx-2 px-4\"><div class=\"border-0 border-b-2 p-4\"><h1 class=\"font-extrabold text-2xl text-gray-700\">Supervision</h1></div><!-- &lt;div class=&quot;py-4&quot;&gt;\r\n                &lt;div class=&quot;w-full md:h-28 md:flex justify-between shadow-md border&quot;&gt;\r\n                   &lt;div class=&quot;p-2 w-full text-center md:text-left&quot;&gt;\r\n                       &lt;h3 class=&quot;text-md font-bold&quot;&gt;ETA CYRIL&lt;/h3&gt;\r\n                       &lt;p class=&quot;text-sm font-light mt-2&quot;&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit&lt;/p&gt;\r\n                           &lt;p class=&quot;text-sm font-light mt-2&quot;&gt;University of Douala - 2021&lt;/p&gt;\r\n                   &lt;/div&gt;\r\n                &lt;/div&gt;   \r\n            &lt;/div&gt; --></div></div>", 1);
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><div class=\"shadow my-6 mx-2 px-4\"><div class=\"border-0 border-b-2 p-4\"><h1 class=\"font-extrabold text-2xl text-gray-700\">Thesis or Dissertation</h1></div><div class=\"py-4\"><p class=\"text-sm font-light text-center\">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p><p class=\"text-sm font-light mt-2 text-center\">University of Douala - 2021</p><div class=\"flex text-xs font-light text-blue-600 mt-3 justify-center space-x-6 text-center\"><a href=\"#\" class=\"flex items-center hover:underline\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5 mr-1\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path d=\"M10 12a2 2 0 100-4 2 2 0 000 4z\"></path><path fill-rule=\"evenodd\" d=\"M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z\" clip-rule=\"evenodd\"></path></svg><span>View</span></a><a href=\"#\" class=\"flex items-center hover:underline\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5 mr-1\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z\" clip-rule=\"evenodd\"></path></svg><span>Download</span></a></div></div></div><div class=\"shadow my-6 mx-2 px-4\"><div class=\"border-0 border-b-2 p-4\"><h1 class=\"font-extrabold text-2xl text-gray-700\">Supervision</h1></div><!-- &lt;div class=&quot;py-4&quot;&gt;\r\n                &lt;div class=&quot;w-full md:h-28 md:flex justify-between shadow-md border&quot;&gt;\r\n                   &lt;div class=&quot;p-2 w-full text-center md:text-left&quot;&gt;\r\n                       &lt;h3 class=&quot;text-md font-bold&quot;&gt;ETA CYRIL&lt;/h3&gt;\r\n                       &lt;p class=&quot;text-sm font-light mt-2&quot;&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit&lt;/p&gt;\r\n                           &lt;p class=&quot;text-sm font-light mt-2&quot;&gt;University of Douala - 2021&lt;/p&gt;\r\n                   &lt;/div&gt;\r\n                &lt;/div&gt;   \r\n            &lt;/div&gt; --></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [$setup.member.avatar ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {

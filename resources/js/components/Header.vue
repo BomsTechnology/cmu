@@ -5,7 +5,7 @@ import { UserCircleIcon } from "@heroicons/vue/solid";
 //varibles
 const open = ref(false);
 const user = localStorage.user ? JSON.parse(localStorage.user) : '';
-
+const currentDate = (new Date()).getFullYear();
 
 //functions
 
@@ -80,7 +80,7 @@ const user = localStorage.user ? JSON.parse(localStorage.user) : '';
                 <div class="items-center md:flex" v-if="open">
                     <div class="flex md:hidden flex-col mt-2 md:flex-row md:mt-0 md:mx-1">
                         <router-link :to="{name:'home'}" class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Home</router-link>
-                        <router-link :to="{name:'news-events'}" class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">News & Events</router-link>
+                        <router-link :to="{name:'news-events', params: {year: currentDate}}" class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">News & Events</router-link>
                         <router-link :to="{name:'membership'}" class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Membership</router-link>
                         <router-link :to="{name:'cam-math-db'}" class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Cameroon Mathematician Database</router-link>
                         <router-link :to="{name:'awards'}" class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Awards</router-link>
@@ -117,7 +117,7 @@ const user = localStorage.user ? JSON.parse(localStorage.user) : '';
 
             <div class="py-3 text-center lg:px-32 md:px-4 mt-3 bg-blue-600 overflow-y-auto whitespace-nowrap scroll-hidden hidden md:block">
                 <router-link :to="{name:'home'}" class="my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700" href="#">Home</router-link>
-                <router-link :to="{name:'news-events'}" class="my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700" href="#">News & Events</router-link>
+                <router-link :to="{name:'news-events', params: {year: currentDate}}" class="my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700" href="#">News & Events</router-link>
                 <router-link :to="{name:'membership'}" class="my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700" href="#">Membership</router-link>
                 <router-link :to="{name:'cam-math-db'}" class="my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700" href="#">Cameroon Mathematician Database</router-link>
                 <router-link :to="{name:'awards'}" class="my-1 px-3 py-2 mx-1 text-md text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700" href="#">Awards</router-link>

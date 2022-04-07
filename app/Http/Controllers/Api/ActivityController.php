@@ -21,9 +21,14 @@ class ActivityController extends Controller
 
     public function get_by_year($year)
     {
-        $startDate = $year.'-01-01';
-        $endDate = $year.'-12-31';
-        return ActivityResource::collection(Activity::whereBetween('activity_date', [$startDate, $endDate])->orderBy('id', 'desc')->get());
+        if($year == 'previous'){
+            $syear = (((int) date("Y")) - 2).'-01-01';
+            return ActivityResource::collection(Activity::where('activity_date', '<', $syear)->orderBy('id', 'desc')->get());
+        }else{
+            $startDate = $year.'-01-01';
+            $endDate = $year.'-12-31';
+            return ActivityResource::collection(Activity::whereBetween('activity_date', [$startDate, $endDate])->orderBy('id', 'desc')->get());
+        }
     }
 
     /**

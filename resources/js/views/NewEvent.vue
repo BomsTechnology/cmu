@@ -16,11 +16,12 @@ const currentDate = (new Date()).getFullYear();
 onMounted(getActivitiesFront(props.year));
 
 function changeDate(date) {
-    // router.push({
-    //     name:'news-events', 
-    //     params: {year: date}
-    // });
-    location.href = '/news-events/'+date
+    getActivitiesFront(date);
+    router.push({
+        name:'news-events', 
+        params: {year: date}
+    });
+    //location.href = '/news-events/'+date
 }
 
 
@@ -64,11 +65,13 @@ function changeDate(date) {
             <h1 class="text-2xl text-blue-600 font-bold underline">News</h1>
 
             <div class="h-full py-4" v-if="news.length != 0">
-                <div class="w-full md:h-28 md:flex shadow-md border"  v-for="n in news" :key="n.id">
-                   <img src="/assets/img_caroussel/img_caroussel3.jpg" class="md:w-32 md:h-full object-cover w-full h-24" alt="">
-                   <div class="p-2 text-center md:text-left">
-                       <h3 class="text-md">Lorem, ipsum dolor sit amet consectetur</h3>
-                       <p class="text-sm font-light mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid laborum maxime illo quis at officiis suscipit</p>
+                <div class="w-full md:h-28 md:flex shadow border"  v-for="n in news" :key="n.id">
+                   <img :src="n.image" class="md:w-32 md:h-full object-cover w-full h-24" alt="">
+                   <div class="p-2 text-center md:text-left w-full">
+                       <h3 class="text-md">{{ n.title }}</h3>
+                       <p class="text-sm font-light mt-2">
+                           {{ n.content.substring(0, 19) + "..." }}
+                       </p>
                        <a href="#" class="text-sm text-blue-600 mt-2 hover:underline">Read More</a>
                    </div>
                    <div class="px-1 h-full bg-gray-400 w-1 md:block hidden">&nbsp;</div>
@@ -89,10 +92,12 @@ function changeDate(date) {
 
             <div class="h-full py-4" v-if="events.length != 0">
                <div class="w-full md:h-28 md:flex shadow-md border" v-for="event in events" :key="event.id">
-                   <img src="/assets/img_caroussel/img_caroussel3.jpg" class="md:w-32 md:h-full object-cover w-full h-24" alt="">
-                   <div class="p-2 text-center md:text-left">
-                       <h3 class="text-md">Lorem, ipsum dolor sit amet consectetur</h3>
-                       <p class="text-sm font-light mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid laborum maxime illo quis at officiis suscipit</p>
+                   <img :src="event.image" class="md:w-32 md:h-full object-cover w-full h-24" alt="">
+                   <div class="p-2 text-center md:text-left w-full">
+                       <h3 class="text-md">{{ event.title }}</h3>
+                       <p class="text-sm font-light mt-2">
+                           {{ event.content.substring(0, 19) + "..." }}
+                        </p>
                        <a href="#" class="text-sm text-blue-600 mt-2">Read More</a>
                    </div>
                    <div class="px-1 h-full bg-gray-400 w-1 md:block hidden">&nbsp;</div>

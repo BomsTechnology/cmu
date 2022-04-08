@@ -13,7 +13,7 @@ class AwardsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class AwardsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'awards_date' => 'required|date',
+            'user_id' => '',
         ];
     }
 }

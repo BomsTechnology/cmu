@@ -29,6 +29,12 @@ const ActivityEdit = () => import  ("../views/back/activity/ActivityEdit.vue");
 const JobIndex = () => import  ("../views/back/job/JobIndex.vue");
 const JobCreate = () => import  ("../views/back/job/JobCreate.vue");
 const JobEdit = () => import  ("../views/back/job/JobEdit.vue");
+const ThesesIndex = () => import  ("../views/back/theses/ThesesIndex.vue");
+const ThesesCreate = () => import  ("../views/back/theses/ThesesCreate.vue");
+const ThesesEdit = () => import  ("../views/back/theses/ThesesEdit.vue");
+const AwardsIndex = () => import  ("../views/back/awards/AwardsIndex.vue");
+const AwardsCreate = () => import  ("../views/back/awards/AwardsCreate.vue");
+const AwardsEdit = () => import  ("../views/back/awards/AwardsEdit.vue");
 
 const siteName = "CMU";
 
@@ -266,6 +272,56 @@ const routes = [
                 name: 'admin.activity.edit',
                 meta:{
                     title: siteName + ' - Edit Activity'
+                }
+            },
+            {
+                path: 'awards',
+                component: AwardsIndex,
+                name: 'admin.awards.index',
+                meta:{
+                    title: siteName + ' - Awards'
+                }
+            },
+            {
+                path: 'awards/create',
+                component: AwardsCreate,
+                name: 'admin.awards.create',
+                meta:{
+                    title: siteName + ' - Create Awards'
+                }
+            },
+            {
+                path: 'awards/edit/:id',
+                component: AwardsEdit,
+                props: true,
+                name: 'admin.awards.edit',
+                meta:{
+                    title: siteName + ' - Edit Awards'
+                }
+            },
+            {
+                path: 'theses',
+                component: ThesesIndex,
+                name: 'admin.theses.index',
+                meta:{
+                    title: siteName + ' - Theses'
+                }
+            },
+            {
+                path: 'theses/create',
+                component: ThesesCreate,
+                name: 'admin.theses.create',
+                meta:{
+                    title: siteName + ' - Create Theses'
+                }
+            },
+            {
+                path: 'theses/edit/:id',
+                component: ThesesEdit,
+                props: true,
+                name: 'admin.theses.edit',
+                meta:{
+                    title: siteName + ' - Edit Theses'
                 }
             },
             {

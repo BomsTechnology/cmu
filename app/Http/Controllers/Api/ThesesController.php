@@ -32,7 +32,7 @@ class ThesesController extends Controller
             'university' => 'required|string',
             'year' => 'required|date',
             'user_id' => 'integer|required',
-            'path' => 'required|mimes:pdf|max=2048'
+            'path' => 'required|mimes:pdf|max:2048'
         ]);
 
         $filename = '/uploads/'.time().'.'. $request->file('path')->extension();

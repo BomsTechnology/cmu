@@ -23789,6 +23789,30 @@ var JobEdit = function JobEdit() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_back_job_JobEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/job/JobEdit.vue */ "./resources/js/views/back/job/JobEdit.vue"));
 };
 
+var ThesesIndex = function ThesesIndex() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_theses_ThesesIndex_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/theses/ThesesIndex.vue */ "./resources/js/views/back/theses/ThesesIndex.vue"));
+};
+
+var ThesesCreate = function ThesesCreate() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_theses_ThesesCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/theses/ThesesCreate.vue */ "./resources/js/views/back/theses/ThesesCreate.vue"));
+};
+
+var ThesesEdit = function ThesesEdit() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_theses_ThesesEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/theses/ThesesEdit.vue */ "./resources/js/views/back/theses/ThesesEdit.vue"));
+};
+
+var AwardsIndex = function AwardsIndex() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_awards_AwardsIndex_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/awards/AwardsIndex.vue */ "./resources/js/views/back/awards/AwardsIndex.vue"));
+};
+
+var AwardsCreate = function AwardsCreate() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_awards_AwardsCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/awards/AwardsCreate.vue */ "./resources/js/views/back/awards/AwardsCreate.vue"));
+};
+
+var AwardsEdit = function AwardsEdit() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_back_awards_AwardsEdit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/back/awards/AwardsEdit.vue */ "./resources/js/views/back/awards/AwardsEdit.vue"));
+};
+
 var siteName = "CMU";
 var routes = [{
   path: '/',
@@ -23992,6 +24016,50 @@ var routes = [{
   name: 'admin.activity.edit',
   meta: {
     title: siteName + ' - Edit Activity'
+  }
+}, {
+  path: 'awards',
+  component: AwardsIndex,
+  name: 'admin.awards.index',
+  meta: {
+    title: siteName + ' - Awards'
+  }
+}, {
+  path: 'awards/create',
+  component: AwardsCreate,
+  name: 'admin.awards.create',
+  meta: {
+    title: siteName + ' - Create Awards'
+  }
+}, {
+  path: 'awards/edit/:id',
+  component: AwardsEdit,
+  props: true,
+  name: 'admin.awards.edit',
+  meta: {
+    title: siteName + ' - Edit Awards'
+  }
+}, {
+  path: 'theses',
+  component: ThesesIndex,
+  name: 'admin.theses.index',
+  meta: {
+    title: siteName + ' - Theses'
+  }
+}, {
+  path: 'theses/create',
+  component: ThesesCreate,
+  name: 'admin.theses.create',
+  meta: {
+    title: siteName + ' - Create Theses'
+  }
+}, {
+  path: 'theses/edit/:id',
+  component: ThesesEdit,
+  props: true,
+  name: 'admin.theses.edit',
+  meta: {
+    title: siteName + ' - Edit Theses'
   }
 }, {
   path: 'job-offer',
@@ -62781,7 +62849,7 @@ module.exports = JSON.parse('{"lastest":"Recente","fr":"Français","en":"English
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_back_member_MemberIndex_vue":1,"resources_js_views_back_member_MemberCreate_vue":1,"resources_js_views_back_member_MemberEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1,"resources_js_views_back_activity_ActivityIndex_vue":1,"resources_js_views_back_activity_ActivityCreate_vue":1,"resources_js_views_back_activity_ActivityEdit_vue":1,"resources_js_views_back_job_JobIndex_vue":1,"resources_js_views_back_job_JobCreate_vue":1,"resources_js_views_back_job_JobEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Awards_vue":1,"resources_js_views_JobOffer_vue":1,"resources_js_views_LogIn_vue":1,"resources_js_views_MathematicianDatabase_vue":1,"resources_js_views_NewEvent_vue":1,"resources_js_views_Thesis_vue":1,"resources_js_views_About_vue":1,"resources_js_views_Membership_vue":1,"resources_js_views_SinglePost_vue":1,"resources_js_views_Join_vue":1,"resources_js_views_Account_vue":1,"resources_js_views_back_Dashboard_vue":1,"resources_js_views_back_Login_vue":1,"resources_js_views_back_post_PostIndex_vue":1,"resources_js_views_back_post_PostCreate_vue":1,"resources_js_views_back_post_PostEdit_vue":1,"resources_js_views_back_member_MemberIndex_vue":1,"resources_js_views_back_member_MemberCreate_vue":1,"resources_js_views_back_member_MemberEdit_vue":1,"resources_js_views_NotFound_vue":1,"resources_js_views_back_university_UniversityIndex_vue":1,"resources_js_views_back_university_UniversityCreate_vue":1,"resources_js_views_back_university_UniversityEdit_vue":1,"resources_js_views_back_activity_ActivityIndex_vue":1,"resources_js_views_back_activity_ActivityCreate_vue":1,"resources_js_views_back_activity_ActivityEdit_vue":1,"resources_js_views_back_job_JobIndex_vue":1,"resources_js_views_back_job_JobCreate_vue":1,"resources_js_views_back_job_JobEdit_vue":1,"resources_js_views_back_theses_ThesesIndex_vue":1,"resources_js_views_back_theses_ThesesCreate_vue":1,"resources_js_views_back_theses_ThesesEdit_vue":1,"resources_js_views_back_awards_AwardsIndex_vue":1,"resources_js_views_back_awards_AwardsCreate_vue":1,"resources_js_views_back_awards_AwardsEdit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

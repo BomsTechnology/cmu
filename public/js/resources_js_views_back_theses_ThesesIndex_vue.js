@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_views_back_post_PostIndex_vue"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_views_back_theses_ThesesIndex_vue"],{
 
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
@@ -238,10 +238,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/post/PostIndex.vue?vue&type=script&setup=true&lang=js":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/post/PostIndex.vue?vue&type=script&setup=true&lang=js ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/theses/ThesesIndex.vue?vue&type=script&setup=true&lang=js":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/theses/ThesesIndex.vue?vue&type=script&setup=true&lang=js ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -254,7 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _components_Sidebar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/Sidebar.vue */ "./resources/js/components/Sidebar.vue");
 /* harmony import */ var _heroicons_vue_solid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/vue/solid */ "./node_modules/@heroicons/vue/solid/esm/PlusCircleIcon.js");
-/* harmony import */ var _services_postServices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/postServices.js */ "./resources/js/services/postServices.js");
+/* harmony import */ var _services_thesesServices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/thesesServices.js */ "./resources/js/services/thesesServices.js");
 /* harmony import */ var _components_Error_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/Error.vue */ "./resources/js/components/Error.vue");
 
 
@@ -272,17 +272,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     var expose = _ref.expose;
     expose();
 
-    var _usePosts = (0,_services_postServices_js__WEBPACK_IMPORTED_MODULE_3__["default"])(),
-        posts = _usePosts.posts,
-        getPosts = _usePosts.getPosts,
-        destroyPost = _usePosts.destroyPost,
-        loading = _usePosts.loading,
-        errors = _usePosts.errors;
+    var _useTheses = (0,_services_thesesServices_js__WEBPACK_IMPORTED_MODULE_3__["default"])(),
+        theses = _useTheses.theses,
+        getTheses = _useTheses.getTheses,
+        destroyThese = _useTheses.destroyThese,
+        loading = _useTheses.loading,
+        errors = _useTheses.errors;
 
     var searchKey = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)("");
-    (0,vue__WEBPACK_IMPORTED_MODULE_1__.onMounted)(getPosts());
+    (0,vue__WEBPACK_IMPORTED_MODULE_1__.onMounted)(getTheses());
 
-    var deletePost = /*#__PURE__*/function () {
+    var deleteThese = /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(id) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
@@ -294,7 +294,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 _context.next = 3;
-                return destroyPost(id);
+                return destroyThese(id);
 
               case 3:
                 if (!(errors.value == '')) {
@@ -303,7 +303,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 _context.next = 6;
-                return getPosts();
+                return getTheses();
 
               case 6:
               case "end":
@@ -313,15 +313,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }));
 
-      return function deletePost(_x) {
+      return function deleteThese(_x) {
         return _ref2.apply(this, arguments);
       };
     }();
 
-    var filteredPost = (0,vue__WEBPACK_IMPORTED_MODULE_1__.computed)({
+    var filteredThese = (0,vue__WEBPACK_IMPORTED_MODULE_1__.computed)({
       get: function get() {
-        return posts.value.filter(function (post) {
-          return post.title.toLowerCase().includes(searchKey.value.toLowerCase());
+        return theses.value.filter(function (these) {
+          return these.theme.toLowerCase().includes(searchKey.value.toLowerCase());
         });
       },
       set: function set(val) {
@@ -329,20 +329,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
     });
     var __returned__ = {
-      posts: posts,
-      getPosts: getPosts,
-      destroyPost: destroyPost,
+      theses: theses,
+      getTheses: getTheses,
+      destroyThese: destroyThese,
       loading: loading,
       errors: errors,
       searchKey: searchKey,
-      deletePost: deletePost,
-      filteredPost: filteredPost,
+      deleteThese: deleteThese,
+      filteredThese: filteredThese,
       onMounted: vue__WEBPACK_IMPORTED_MODULE_1__.onMounted,
       ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
       computed: vue__WEBPACK_IMPORTED_MODULE_1__.computed,
       Sidebar: _components_Sidebar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
       PlusCircleIcon: _heroicons_vue_solid__WEBPACK_IMPORTED_MODULE_5__["default"],
-      usePosts: _services_postServices_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+      useTheses: _services_thesesServices_js__WEBPACK_IMPORTED_MODULE_3__["default"],
       Error: _components_Error_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -1173,10 +1173,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/post/PostIndex.vue?vue&type=template&id=36f04688":
-/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/post/PostIndex.vue?vue&type=template&id=36f04688 ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/theses/ThesesIndex.vue?vue&type=template&id=759ce1fc":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/theses/ThesesIndex.vue?vue&type=template&id=759ce1fc ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1201,13 +1201,13 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-4xl text-gray-700 font-bold capitalize"
-}, " Post ", -1
+}, " These ", -1
 /* HOISTED */
 );
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-base leading-4"
-}, "Add Post", -1
+}, "Add These", -1
 /* HOISTED */
 );
 
@@ -1262,13 +1262,13 @@ var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   scope: "col",
   "class": "py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-}, " Image "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, " Theme "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   scope: "col",
   "class": "py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-}, " User "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, " University "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   scope: "col",
   "class": "py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
-}, " Title "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, " Year "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   scope: "col",
   "class": "py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
 }, " Content "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
@@ -1287,7 +1287,9 @@ var _hoisted_17 = {
 var _hoisted_18 = {
   "class": "py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
 };
-var _hoisted_19 = ["src"];
+var _hoisted_19 = {
+  "class": "py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
+};
 var _hoisted_20 = {
   "class": "py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
 };
@@ -1295,21 +1297,18 @@ var _hoisted_21 = {
   "class": "py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
 };
 var _hoisted_22 = {
-  "class": "py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
-};
-var _hoisted_23 = {
   "class": "py-4 px-6 text-sm font-medium text-right whitespace-nowrap"
 };
 
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edit");
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edit");
 
-var _hoisted_25 = ["onClick"];
-var _hoisted_26 = {
+var _hoisted_24 = ["onClick"];
+var _hoisted_25 = {
   key: 1,
   "class": "bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
 };
 
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
   "class": "hover:bg-gray-100 dark:hover:bg-gray-700"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
   colspan: "7",
@@ -1334,28 +1333,28 @@ var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_28 = [_hoisted_27];
-var _hoisted_29 = {
+var _hoisted_27 = [_hoisted_26];
+var _hoisted_28 = {
   key: 2,
   "class": "bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
 };
 
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
   "class": "hover:bg-gray-100 dark:hover:bg-gray-700"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
   colspan: "7",
   "class": "py-4 px-6 text-xl font-medium text-gray-900 text-center whitespace-nowrap uppercase"
-}, " NO POST ")], -1
+}, " NO THESES ")], -1
 /* HOISTED */
 );
 
-var _hoisted_31 = [_hoisted_30];
+var _hoisted_30 = [_hoisted_29];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Sidebar"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
-      name: 'admin.post.create'
+      name: 'admin.theses.create'
     },
     "class": "flex justify-start items-center space-x-3 text-white bg-blue-600 rounded px-3 py-2"
   }, {
@@ -1379,34 +1378,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Search for items"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.searchKey]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_15, [_hoisted_16, $setup.filteredPost.length != 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", _hoisted_17, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.filteredPost, function (post) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.searchKey]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_15, [_hoisted_16, $setup.filteredThese.length != 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", _hoisted_17, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.filteredThese, function (these) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
-      key: post.id,
+      key: these.id,
       "class": "hover:bg-gray-100 dark:hover:bg-gray-700"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      src: post.image,
-      alt: "",
-      "class": "w-16 rounded-full h-16 object-cover"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_19)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.user.firstname), 1
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(these.theme), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(these.university), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.content.substring(0, 19) + "..."), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(these.year), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(these.path), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: {
-        name: 'admin.post.edit',
+        name: 'admin.theses.edit',
         params: {
-          id: post.id
+          id: these.id
         }
       },
       href: "#",
       "class": "text-blue-600 dark:text-blue-500 hover:underline"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [_hoisted_24];
+        return [_hoisted_23];
       }),
       _: 2
       /* DYNAMIC */
@@ -1415,30 +1410,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* PROPS, DYNAMIC_SLOTS */
     , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       onClick: function onClick($event) {
-        return $setup.deletePost(post.id);
+        return $setup.deleteThese(these.id);
       },
       href: "#",
       "class": "text-red-600 ml-3 dark:text-blue-500 hover:underline"
     }, "Delete", 8
     /* PROPS */
-    , _hoisted_25)])]);
+    , _hoisted_24)])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", _hoisted_26, _hoisted_28)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", _hoisted_29, _hoisted_31))])])])])])])])]);
+  ))])) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", _hoisted_25, _hoisted_27)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tbody", _hoisted_28, _hoisted_30))])])])])])])])]);
 }
 
 /***/ }),
 
-/***/ "./resources/js/services/postServices.js":
-/*!***********************************************!*\
-  !*** ./resources/js/services/postServices.js ***!
-  \***********************************************/
+/***/ "./resources/js/services/thesesServices.js":
+/*!*************************************************!*\
+  !*** ./resources/js/services/thesesServices.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ usePosts)
+/* harmony export */   "default": () => (/* binding */ useTheses)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
@@ -1457,15 +1452,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-function usePosts() {
+function useTheses() {
   var _ref8;
 
-  var posts = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var post = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
+  var theses = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
+  var these = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
   var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
 
-  var getPosts = /*#__PURE__*/function () {
+  var getTheses = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -1475,7 +1470,7 @@ function usePosts() {
               errors.value = '';
               loading.value = 1;
               _context.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts/', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/theses/', {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token)
                 }
@@ -1483,7 +1478,7 @@ function usePosts() {
 
             case 4:
               response = _context.sent;
-              posts.value = response.data.data;
+              theses.value = response.data.data;
               loading.value = 2;
 
             case 7:
@@ -1494,12 +1489,12 @@ function usePosts() {
       }, _callee);
     }));
 
-    return function getPosts() {
+    return function getTheses() {
       return _ref.apply(this, arguments);
     };
   }();
 
-  var getPostsUser = /*#__PURE__*/function () {
+  var getThesesUser = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(id) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
@@ -1509,7 +1504,7 @@ function usePosts() {
               errors.value = '';
               loading.value = 1;
               _context2.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts-user/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/theses-user/' + id, {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token)
                 }
@@ -1517,7 +1512,7 @@ function usePosts() {
 
             case 4:
               response = _context2.sent;
-              posts.value = response.data.data;
+              theses.value = response.data.data;
               loading.value = 2;
 
             case 7:
@@ -1528,12 +1523,12 @@ function usePosts() {
       }, _callee2);
     }));
 
-    return function getPostsUser(_x) {
+    return function getThesesUser(_x) {
       return _ref2.apply(this, arguments);
     };
   }();
 
-  var getPost = /*#__PURE__*/function () {
+  var getThese = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(id) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
@@ -1543,7 +1538,7 @@ function usePosts() {
               errors.value = '';
               loading.value = 1;
               _context3.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/theses/' + id, {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token)
                 }
@@ -1552,7 +1547,7 @@ function usePosts() {
             case 4:
               response = _context3.sent;
               loading.value = 0;
-              post.value = response.data.data;
+              these.value = response.data.data;
 
             case 7:
             case "end":
@@ -1562,12 +1557,12 @@ function usePosts() {
       }, _callee3);
     }));
 
-    return function getPost(_x2) {
+    return function getThese(_x2) {
       return _ref3.apply(this, arguments);
     };
   }();
 
-  var getPost2 = /*#__PURE__*/function () {
+  var getThese2 = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
@@ -1577,7 +1572,7 @@ function usePosts() {
               errors.value = '';
               loading.value = 1;
               _context4.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts2/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/theses2/' + id, {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token)
                 }
@@ -1586,7 +1581,7 @@ function usePosts() {
             case 4:
               response = _context4.sent;
               loading.value = 0;
-              post.value = response.data.data;
+              these.value = response.data.data;
 
             case 7:
             case "end":
@@ -1596,12 +1591,12 @@ function usePosts() {
       }, _callee4);
     }));
 
-    return function getPost2(_x3) {
+    return function getThese2(_x3) {
       return _ref4.apply(this, arguments);
     };
   }();
 
-  var createPost = /*#__PURE__*/function () {
+  var createThese = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(data) {
       var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
@@ -1612,7 +1607,7 @@ function usePosts() {
               _context5.prev = 1;
               loading.value = 1;
               _context5.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/posts', data, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/theses', data, {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token),
                   'Content-Type': 'multipart/form-data'
@@ -1644,12 +1639,12 @@ function usePosts() {
       }, _callee5, null, [[1, 8]]);
     }));
 
-    return function createPost(_x4) {
+    return function createThese(_x4) {
       return _ref5.apply(this, arguments);
     };
   }();
 
-  var updatePost = /*#__PURE__*/function () {
+  var updateThese = /*#__PURE__*/function () {
     var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(data) {
       var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
@@ -1660,7 +1655,7 @@ function usePosts() {
               _context6.prev = 1;
               loading.value = 1;
               _context6.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/posts/' + post.value.id, data, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/theses/' + these.value.id, data, {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token),
                   'Content-Type': 'multipart/form-data'
@@ -1691,12 +1686,12 @@ function usePosts() {
       }, _callee6, null, [[1, 8]]);
     }));
 
-    return function updatePost(_x5) {
+    return function updateThese(_x5) {
       return _ref6.apply(this, arguments);
     };
   }();
 
-  var destroyPost = /*#__PURE__*/function () {
+  var destroyThese = /*#__PURE__*/function () {
     var _ref7 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7(id) {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
         while (1) {
@@ -1706,7 +1701,7 @@ function usePosts() {
               _context7.prev = 1;
               loading.value = 1;
               _context7.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/posts/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/theses/' + id, {
                 headers: {
                   'Authorization': "Bearer ".concat(localStorage.token)
                 }
@@ -1723,7 +1718,7 @@ function usePosts() {
               loading.value = 0;
 
               if (_context7.t0.response.status == '500') {
-                errors.value = 'Impossible de supprimer ce post';
+                errors.value = 'Impossible de supprimer ce these';
               }
 
             case 12:
@@ -1734,23 +1729,23 @@ function usePosts() {
       }, _callee7, null, [[1, 8]]);
     }));
 
-    return function destroyPost(_x6) {
+    return function destroyThese(_x6) {
       return _ref7.apply(this, arguments);
     };
   }();
 
   return _ref8 = {
-    posts: posts,
-    post: post,
+    theses: theses,
+    these: these,
     errors: errors,
     loading: loading,
-    getPosts: getPosts,
-    getPost: getPost,
-    createPost: createPost,
-    updatePost: updatePost,
-    destroyPost: destroyPost,
-    getPost2: getPost2
-  }, _defineProperty(_ref8, "getPosts", getPosts), _defineProperty(_ref8, "getPostsUser", getPostsUser), _ref8;
+    getTheses: getTheses,
+    getThese: getThese,
+    createThese: createThese,
+    updateThese: updateThese,
+    destroyThese: destroyThese,
+    getThese2: getThese2
+  }, _defineProperty(_ref8, "getTheses", getTheses), _defineProperty(_ref8, "getThesesUser", getThesesUser), _ref8;
 }
 
 /***/ }),
@@ -2575,10 +2570,10 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/views/back/post/PostIndex.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/views/back/post/PostIndex.vue ***!
-  \****************************************************/
+/***/ "./resources/js/views/back/theses/ThesesIndex.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/views/back/theses/ThesesIndex.vue ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2586,15 +2581,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _PostIndex_vue_vue_type_template_id_36f04688__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostIndex.vue?vue&type=template&id=36f04688 */ "./resources/js/views/back/post/PostIndex.vue?vue&type=template&id=36f04688");
-/* harmony import */ var _PostIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PostIndex.vue?vue&type=script&setup=true&lang=js */ "./resources/js/views/back/post/PostIndex.vue?vue&type=script&setup=true&lang=js");
+/* harmony import */ var _ThesesIndex_vue_vue_type_template_id_759ce1fc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ThesesIndex.vue?vue&type=template&id=759ce1fc */ "./resources/js/views/back/theses/ThesesIndex.vue?vue&type=template&id=759ce1fc");
+/* harmony import */ var _ThesesIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ThesesIndex.vue?vue&type=script&setup=true&lang=js */ "./resources/js/views/back/theses/ThesesIndex.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var C_laragon_www_cmu_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_cmu_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_PostIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_PostIndex_vue_vue_type_template_id_36f04688__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/back/post/PostIndex.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_laragon_www_cmu_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ThesesIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ThesesIndex_vue_vue_type_template_id_759ce1fc__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/back/theses/ThesesIndex.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -2635,18 +2630,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/back/post/PostIndex.vue?vue&type=script&setup=true&lang=js":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/views/back/post/PostIndex.vue?vue&type=script&setup=true&lang=js ***!
-  \***************************************************************************************/
+/***/ "./resources/js/views/back/theses/ThesesIndex.vue?vue&type=script&setup=true&lang=js":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/views/back/theses/ThesesIndex.vue?vue&type=script&setup=true&lang=js ***!
+  \*******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PostIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThesesIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PostIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PostIndex.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/post/PostIndex.vue?vue&type=script&setup=true&lang=js");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThesesIndex_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ThesesIndex.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/theses/ThesesIndex.vue?vue&type=script&setup=true&lang=js");
  
 
 /***/ }),
@@ -2683,18 +2678,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/back/post/PostIndex.vue?vue&type=template&id=36f04688":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/views/back/post/PostIndex.vue?vue&type=template&id=36f04688 ***!
-  \**********************************************************************************/
+/***/ "./resources/js/views/back/theses/ThesesIndex.vue?vue&type=template&id=759ce1fc":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/views/back/theses/ThesesIndex.vue?vue&type=template&id=759ce1fc ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PostIndex_vue_vue_type_template_id_36f04688__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThesesIndex_vue_vue_type_template_id_759ce1fc__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PostIndex_vue_vue_type_template_id_36f04688__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PostIndex.vue?vue&type=template&id=36f04688 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/post/PostIndex.vue?vue&type=template&id=36f04688");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThesesIndex_vue_vue_type_template_id_759ce1fc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ThesesIndex.vue?vue&type=template&id=759ce1fc */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/back/theses/ThesesIndex.vue?vue&type=template&id=759ce1fc");
 
 
 /***/ }),

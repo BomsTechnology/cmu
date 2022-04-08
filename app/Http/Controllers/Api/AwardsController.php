@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AwardsRequest;
+use App\Http\Resources\AwardsResource;
 use App\Models\Awards;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,7 @@ class AwardsController extends Controller
      */
     public function index()
     {
-        //
+        return AwardsResource::collection(Awards::latest()->get());
     }
 
     /**
@@ -24,9 +26,10 @@ class AwardsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AwardsRequest $request)
     {
-        //
+        $awards = Awards::create($request->validated());
+        return new AwardsResource($awards);
     }
 
     /**
@@ -37,7 +40,7 @@ class AwardsController extends Controller
      */
     public function show(Awards $awards)
     {
-        //
+        return new AwardsResource($awards);
     }
 
     /**
@@ -47,9 +50,10 @@ class AwardsController extends Controller
      * @param  \App\Models\Awards  $awards
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Awards $awards)
+    public function update(AwardsRequest $request, Awards $awards)
     {
-        //
+        $awards->update($request->validated());
+        return new AwardsResource($awards);
     }
 
     /**
@@ -60,6 +64,8 @@ class AwardsController extends Controller
      */
     public function destroy(Awards $awards)
     {
-        //
+        $awards->delete();
+
+        return response()->noContent();
     }
 }

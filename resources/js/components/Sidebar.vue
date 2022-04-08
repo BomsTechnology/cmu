@@ -142,18 +142,20 @@
                 v-if="open.awards"
                 class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
             >
-                <a href="/admin/post/article"
+                <router-link
+                        :to="{name:'admin.awards.index'}"
                     class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
                 >
                     <TableIcon class="w-6 h-6" />
                     <p class="text-base leading-4">All Awards</p>
-                </a>
-                <button
+                </router-link>
+                <router-link
+                        :to="{name:'admin.awards.create'}"
                     class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
                 >
                     <PlusCircleIcon class="w-6 h-6" />
                     <p class="text-base leading-4">Add Awards</p>
-                </button>
+                </router-link>
             </div>
         </div>
         <div
@@ -177,18 +179,20 @@
                 v-if="open.theses"
                 class="flex justify-start flex-col w-full md:w-auto items-start pb-1"
             >
-                <a href="/admin/post/article"
+                <router-link
+                        :to="{name:'admin.theses.index'}"
                     class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
                 >
                     <TableIcon class="w-6 h-6" />
                     <p class="text-base leading-4">All Theses</p>
-                </a>
-                <button
+                </router-link>
+                <router-link
+                        :to="{name:'admin.theses.create'}"
                     class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-full md:w-52"
                 >
                     <PlusCircleIcon class="w-6 h-6" />
                     <p class="text-base leading-4">Add Theses</p>
-                </button>
+                </router-link>
             </div>
         </div>
         <div
@@ -436,11 +440,15 @@ export default {
     setup() {
         const user = reactive({});
         const verifAdmin = async () =>{
-            if(localStorage.token && localStorage.token != ''){
+            if(localStorage.token){
                 user.value = JSON.parse(localStorage.user);
 
                 try {
-                  let response = await axios.post('/api/verif-admin', {id:user.value.id});
+                  let response = await axios.post('/api/verif-admin', {id:user.value.id},{
+            headers:{
+                'Authorization': `Bearer ${localStorage.token}`
+            }
+        });
                 } catch (e) {
                         if(e.response.status == 401){
                             location.href = '/admin';

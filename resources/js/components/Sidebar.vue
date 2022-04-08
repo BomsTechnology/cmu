@@ -442,10 +442,16 @@ export default {
                 try {
                   let response = await axios.post('/api/verif-admin', {id:user.value.id});
                 } catch (e) {
-                        location.href = '/admin';
+                        if(e.response.status == 401){
+                            location.href = '/admin';
+                            window.localStorage.removeItem("token");
+                            window.localStorage.removeItem("user");
+                        }
                 }
             }else{
                 location.href = '/admin';
+                window.localStorage.removeItem("token");
+                window.localStorage.removeItem("user");
             }        
         }
         onMounted(verifAdmin());

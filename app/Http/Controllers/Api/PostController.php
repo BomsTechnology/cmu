@@ -49,9 +49,9 @@ class PostController extends Controller
             $data['image'] = $filename;
         }
       
-    $post = Post::create($data);
-   
-    return new PostResource($post);
+        $post = Post::create($data);
+    
+        return new PostResource($post);
     }
 
     /**

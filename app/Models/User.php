@@ -64,6 +64,14 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function theses(){
+        return $this->hasMany(Theses::class);
+    }
+
+    public function awards(){
+        return $this->hasMany(Awards::class);
+    }
+
     public function university(){
         return $this->belongsTo(University::class);
     }

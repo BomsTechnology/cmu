@@ -130,16 +130,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 8:
                 _context.prev = 8;
                 _context.t0 = _context["catch"](2);
-                location.href = '/admin';
+
+                if (_context.t0.response.status == 401) {
+                  location.href = '/admin';
+                  window.localStorage.removeItem("token");
+                  window.localStorage.removeItem("user");
+                }
 
               case 11:
-                _context.next = 14;
+                _context.next = 16;
                 break;
 
               case 13:
                 location.href = '/admin';
+                window.localStorage.removeItem("token");
+                window.localStorage.removeItem("user");
 
-              case 14:
+              case 16:
               case "end":
                 return _context.stop();
             }

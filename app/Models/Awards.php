@@ -5,15 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Slide extends Model
+class Awards extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'title',
-        'image',
         'description',
-        'text_button',
-        'link_button',
+        'awards_date',
+        'user_id',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

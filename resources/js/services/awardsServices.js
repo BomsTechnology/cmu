@@ -23,6 +23,19 @@ export default function useAwards() {
         // console.log(awards.value);
     };
 
+    const getAwardsFront = async (year) => {
+        errors.value = '';
+        loading.value = 1;
+        let response = await axios.get('/api/awards-front/'+ year,  {
+            headers:{
+                'Authorization': `Bearer ${localStorage.token}`
+            }
+        });
+        awards.value = response.data.data;
+
+        loading.value = 2;
+    };
+
     const getAward = async (id) => {
         errors.value = '';
         loading.value = 1;
@@ -99,6 +112,7 @@ export default function useAwards() {
         award,
         errors,
         loading,
+        getAwardsFront,
         getAwards,
         getAward,
         createAward,

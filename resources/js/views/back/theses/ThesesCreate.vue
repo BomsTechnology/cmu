@@ -3,16 +3,19 @@
     import { reactive, ref, onMounted } from "vue";
     import Error from "../../../components/Error.vue";
     import useTheses from "../../../services/thesesServices.js";
-
+    import useMembers from "../../../services/memberServices.js";
     import router from "../../../router/index.js";
-    const user = JSON.parse(localStorage.user);
+
+    const { members, getMembers} = useMembers();
+
+        onMounted(getMembers());
 
     const these = reactive({
         theme: "",
         year: "",
         path: "",
         university:"",
-        user_id: user.id,
+        user_id: "",
     });
     const { createThese, errors, loading } = useTheses();
 
@@ -86,6 +89,16 @@
                                     type="date"
                                     class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                 />
+                            </div>
+
+                            <div class="col-span-2">
+                                <label class="text-gray-700 dark:text-gray-200"
+                                    >Member</label
+                                >
+                                <select required v-model="these.user_id" name="" id="" class="form-select block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-primary-blue focus:border-primary-blue">
+                                    <option v-for="member in members"
+                                            :key="member.id" :value="member.id">{{ member.firstname }}</option>
+                                </select>
                             </div>
 
 

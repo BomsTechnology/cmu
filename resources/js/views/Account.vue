@@ -3,13 +3,15 @@ import Header from '../components/Header.vue'
 import { UserCircleIcon } from "@heroicons/vue/solid";
 import { onMounted, ref, computed, toRefs } from "vue";
 import Footer from '../components/Footer.vue';
+import useTheses from "../services/thesesServices.js";
 import useMembers from "../services/memberServices.js";
 const props = defineProps({
     id :  String,
     name: String
 });
 const { getMember2, member, errors, loading } = useMembers();
-onMounted( getMember2(props.id) );
+const { these, getThesesUser } = useTheses();
+onMounted( getMember2(props.id), getThesesUser(props.id) );
 
 
 </script>
@@ -35,7 +37,7 @@ onMounted( getMember2(props.id) );
 </div>
 <!-- cv -->
 <div class="lg:flex">
-    <div class="lg:w-[95%]">
+    <div class="lg:w-[80%]">
         <div class="shadow my-6 mx-2">
     <div class="border-0 border-b-2 p-4">
         <h1 class="font-extrabold text-2xl text-gray-700">Auto-Biography & CV</h1>
@@ -66,36 +68,53 @@ onMounted( getMember2(props.id) );
     </div>
     </div>
 
-    <div>
+    <div class="lg:w-[20%]">
         <div class="shadow my-6 mx-2 px-4">
     <div class="border-0 border-b-2 p-4">
-        <h1 class="font-extrabold text-2xl text-gray-700">Thesis or Dissertation</h1>
+        <h1 class="font-extrabold text-2xl text-gray-700">Thesis</h1>
     </div>
 
-            <div class="py-4">
-                       <p class="text-sm font-light text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                        <p class="text-sm font-light mt-2 text-center">University of Douala - 2021</p>
+            <div 
+                v-if="these.length != 0"
+                class="py-4"
+                v-for="th in these"
+                :key="th.id"
+            >
+                       <p class="text-sm font-light text-center">{{ th.theme }}</p>
+                        <p class="text-sm font-light mt-2 text-center">{{ th.university }} - {{ th.year }}</p>
                         <div class="flex  text-xs font-light text-blue-600 mt-3 justify-center space-x-6 text-center">
-                           <a href="#" class="flex items-center hover:underline">
+                           <a :href="th.path" class="flex items-center hover:underline">
                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                                 <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>View</span>
                            </a>
-                           <a href="#" class="flex items-center hover:underline">
+                           <!-- <a href="#" class="flex items-center hover:underline">
                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
                                 <span>Download</span>
-                           </a>
+                           </a> -->
                        </div>
+            </div>
+            <div v-else-if="loading == 1" class="py-10">
+                <svg class="animate-spin h-16 w-16 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </div>
+            <div v-else>
+                <p class="text-center text-lg py-8">No Thesis</p> 
             </div>
     </div>
         <div class="shadow my-6 mx-2 px-4">
     <div class="border-0 border-b-2 p-4">
         <h1 class="font-extrabold text-2xl text-gray-700">Supervision</h1>
     </div>
+        <div>
+            <p class="text-center text-lg py-8">No Student Supervise</p> 
+        </div>
 
             <!-- <div class="py-4">
                 <div class="w-full md:h-28 md:flex justify-between shadow-md border">

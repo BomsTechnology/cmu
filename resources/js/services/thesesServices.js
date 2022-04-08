@@ -31,7 +31,7 @@ export default function useTheses() {
                 'Authorization': `Bearer ${localStorage.token}`
             }
         });
-        theses.value = response.data.data;
+        these.value = response.data.data;
 
         loading.value = 2;
         

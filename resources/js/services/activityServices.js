@@ -25,6 +25,19 @@ export default function useActivities() {
         loading.value = 2;
     };
 
+    const getActivitiesHome = async () => {
+        errors.value = '';
+        loading.value = 1;
+        let response = await axios.get('/api/activities-home/',  {
+            headers:{
+                'Authorization': `Bearer ${localStorage.token}`
+            }
+        });
+        activities.value = response.data.data;
+
+        loading.value = 2;
+    };
+
     const getActivitiesFront = async (year) => {
         errors.value = '';
         loading.value = 1;
@@ -136,6 +149,7 @@ export default function useActivities() {
         loading,
         news,
         events,
+        getActivitiesHome,
         getActivities,
         getActivitiesFront,
         getActivity,

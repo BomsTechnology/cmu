@@ -23,6 +23,19 @@ export default function usePosts() {
         loading.value = 2;
     };
 
+    const getPostsHome = async () => {
+        errors.value = '';
+        loading.value = 1;
+        let response = await axios.get('/api/posts-home/',  {
+            headers:{
+                'Authorization': `Bearer ${localStorage.token}`
+            }
+        });
+        posts.value = response.data.data;
+
+        loading.value = 2;
+    };
+
     const getPostsUser = async (id) => {
         errors.value = '';
         loading.value = 1;
@@ -126,6 +139,7 @@ export default function usePosts() {
         errors,
         loading,
         getPosts,
+        getPostsHome,
         getPost,
         createPost,
         updatePost,

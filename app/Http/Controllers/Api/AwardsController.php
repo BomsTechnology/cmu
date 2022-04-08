@@ -20,6 +20,18 @@ class AwardsController extends Controller
         return AwardsResource::collection(Awards::latest()->get());
     }
 
+    public function get_by_year($year)
+    {
+        if($year == 'previous'){
+            $syear = (((int) date("Y")) - 2).'-01-01';
+            return AwardsResource::collection(Awards::where('awards_date', '<', $syear)->orderBy('id', 'desc')->get());
+        }else{
+            $startDate = $year.'-01-01';
+            $endDate = $year.'-12-31';
+            return AwardsResource::collection(Awards::whereBetween('awards_date', [$startDate, $endDate])->orderBy('id', 'desc')->get());
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *

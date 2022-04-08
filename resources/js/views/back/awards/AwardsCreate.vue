@@ -1,15 +1,18 @@
 <script setup>
 import Sidebar from "../../../components/Sidebar.vue";
-import { reactive } from "vue";
+import { reactive , onMounted } from "vue";
 import Error from "../../../components/Error.vue";
 import useAwards from "../../../services/awardsServices.js"
-const user = JSON.parse(localStorage.user);
+import useMembers from "../../../services/memberServices.js";
+const { members, getMembers} = useMembers();
+
+        onMounted(getMembers());
 
         const award = reactive({
             title: '',
             description:'',
             awards_date: '',
-            user_id: user.id,
+            user_id: "",
         });
         const { createAward , errors, loading } = useAwards();
 
@@ -48,6 +51,16 @@ const user = JSON.parse(localStorage.user);
                     <label class="text-gray-700 dark:text-gray-200" for="fr">Name</label>
                     <input id="fr" v-model="award.awards_date" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
                 </div>
+
+                <div class="col-span-2">
+                                <label class="text-gray-700 dark:text-gray-200"
+                                    >Member</label
+                                >
+                                <select v-model="award.user_id" name="" id="" class="form-select block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-primary-blue focus:border-primary-blue">
+                                    <option v-for="member in members"
+                                            :key="member.id" :value="member.id">{{ member.firstname }}</option>
+                                </select>
+                            </div>
 
                 <div class="col-span-2">
                     <label

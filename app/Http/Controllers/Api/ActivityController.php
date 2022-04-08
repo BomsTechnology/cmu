@@ -19,6 +19,11 @@ class ActivityController extends Controller
         return ActivityResource::collection(Activity::latest()->get());
     }
 
+    public function activity_home()
+    {
+        return ActivityResource::collection(Activity::orderBy('id', 'desc')->limit(6)->get());
+    }
+
     public function get_by_year($year)
     {
         if($year == 'previous'){

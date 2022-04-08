@@ -73,8 +73,9 @@ const routes = [
         }
     },
     {
-        path: '/awards',
+        path: '/awards/:year?',
         name: 'awards',
+        props: true,
         component: Awards,
         meta:{
             title: siteName + ' - Awards'

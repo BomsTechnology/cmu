@@ -16,6 +16,7 @@ Route::post("/login",[AuthController::class,'login']);
 Route::post("/login-admin",[AuthController::class,'login_admin']);
 
 Route::get("/activities-front/{year}", [ActivityController::class,'get_by_year']);
+Route::get("/activities-home", [ActivityController::class,'activity_home']);
 Route::get("/activities2/{activity}", [ActivityController::class,'show2']);
 Route::get("/activities", [ActivityController::class, 'index']);
 Route::get("/activities/{activity}", [ActivityController::class, 'show']);
@@ -33,6 +34,7 @@ Route::get("/members/{member}", [MemberController::class, 'show']);
 Route::get("/theses", [ThesesController::class, 'index']);
 Route::get("/theses2/{theses}", [ThesesController::class,'show2']);
 Route::get("/theses/{theses}", [ThesesController::class, 'show']);
+Route::get("/theses-user/{user}",[ThesesController::class,'theses_user']);
 
 // ----------------------------------
 Route::get("/jobOffers", [JobOfferController::class, 'index']);
@@ -44,6 +46,7 @@ Route::get("/posts2/{post}", [PostController::class,'show2']);
 Route::get("/posts", [PostController::class, 'index']);
 Route::get("/posts/{posts}", [PostController::class, 'show']);
 Route::get("/posts-user/{user}",[PostController::class,'post_user']);
+Route::get("/posts-home",[PostController::class,'post_home']);
 
 Route::group(['middleware' => ['auth:sanctum']], function(){
 

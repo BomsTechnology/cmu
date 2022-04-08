@@ -142,7 +142,7 @@ import Error from "../../../components/Error.vue";
                                             <td
                                                 class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                                             >
-                                                {{ award.description }}
+                                                {{ award.description.substring(0, 19) + "..."  }}
                                             </td>
                                            <td
                                                 class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap"

@@ -20,6 +20,11 @@ class PostController extends Controller
         return PostResource::collection(Post::latest()->get());
     }
 
+    public function post_home()
+    {
+        return PostResource::collection(Post::orderBy('id', 'desc')->limit(3)->get());
+    }
+
     /**
      * Store a newly created resource in storage.
      *

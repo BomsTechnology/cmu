@@ -19,6 +19,11 @@ class ThesesController extends Controller
         return ThesesResource::collection(Theses::latest()->get());
     }
 
+    public function theses_user($user)
+    {
+        return ThesesResource::collection(Theses::where('user_id', $user)->orderBy('id', 'desc')->get());
+    }
+
     /**
      * Store a newly created resource in storage.
      *

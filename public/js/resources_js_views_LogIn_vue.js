@@ -60,12 +60,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/components/Header.vue");
-/* harmony import */ var _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SubHeader.vue */ "./resources/js/components/SubHeader.vue");
-/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
-/* harmony import */ var _services_authServices_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/authServices.js */ "./resources/js/services/authServices.js");
-/* harmony import */ var _components_Error_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Error.vue */ "./resources/js/components/Error.vue");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubHeader.vue */ "./resources/js/components/SubHeader.vue");
+/* harmony import */ var _services_authServices_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/authServices.js */ "./resources/js/services/authServices.js");
+/* harmony import */ var _components_Error_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Error.vue */ "./resources/js/components/Error.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -82,18 +80,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    var user = (0,vue__WEBPACK_IMPORTED_MODULE_6__.reactive)({
+    var user = (0,vue__WEBPACK_IMPORTED_MODULE_4__.reactive)({
       email: "",
       password: ""
     });
 
-    var _useAuth = (0,_services_authServices_js__WEBPACK_IMPORTED_MODULE_4__["default"])(),
+    var _useAuth = (0,_services_authServices_js__WEBPACK_IMPORTED_MODULE_2__["default"])(),
         loginUser = _useAuth.loginUser,
         errors = _useAuth.errors,
         loading = _useAuth.loading;
@@ -126,14 +122,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       errors: errors,
       loading: loading,
       login: login,
-      Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-      SubHeader: _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-      Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-      useAuth: _services_authServices_js__WEBPACK_IMPORTED_MODULE_4__["default"],
-      Error: _components_Error_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-      reactive: vue__WEBPACK_IMPORTED_MODULE_6__.reactive,
-      ref: vue__WEBPACK_IMPORTED_MODULE_6__.ref,
-      onMounted: vue__WEBPACK_IMPORTED_MODULE_6__.onMounted
+      SubHeader: _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+      useAuth: _services_authServices_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+      Error: _components_Error_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+      reactive: vue__WEBPACK_IMPORTED_MODULE_4__.reactive,
+      ref: vue__WEBPACK_IMPORTED_MODULE_4__.ref,
+      onMounted: vue__WEBPACK_IMPORTED_MODULE_4__.onMounted
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -271,7 +265,7 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "mt-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "px-6 py-2 w-full leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
-}, "Log In")], -1
+}, " Log In ")], -1
 /* HOISTED */
 );
 
@@ -279,7 +273,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "flex justify-start mt-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "px-6 py-2 leading-5 text-sm text-blue-600 transition-colors duration-200 transform hover:underline focus:outline-none"
-}, "Forgot Password ?")], -1
+}, " Forgot Password ? ")], -1
 /* HOISTED */
 );
 
@@ -289,7 +283,7 @@ var _hoisted_9 = {
 
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "absolute text-sm bg-white -top-3 md:right-[218px] right-[145px] px-2"
-}, "Or", -1
+}, " Or ", -1
 /* HOISTED */
 );
 
@@ -298,7 +292,7 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SubHeader"], {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SubHeader"], {
     title: 'Log In'
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_1, [$setup.errors != '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Error"], {
     key: 0
@@ -348,7 +342,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Footer"])], 64
+  })])])], 64
   /* STABLE_FRAGMENT */
   );
 }

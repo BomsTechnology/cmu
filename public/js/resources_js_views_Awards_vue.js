@@ -42,14 +42,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/components/Header.vue");
-/* harmony import */ var _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubHeader.vue */ "./resources/js/components/SubHeader.vue");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _services_awardsServices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/awardsServices.js */ "./resources/js/services/awardsServices.js");
-/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
-/* harmony import */ var _router_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../router/index.js */ "./resources/js/router/index.js");
-
-
+/* harmony import */ var _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/SubHeader.vue */ "./resources/js/components/SubHeader.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _services_awardsServices_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/awardsServices.js */ "./resources/js/services/awardsServices.js");
+/* harmony import */ var _router_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../router/index.js */ "./resources/js/router/index.js");
 
 
 
@@ -63,23 +59,23 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
 
-    var _useAwards = (0,_services_awardsServices_js__WEBPACK_IMPORTED_MODULE_3__["default"])(),
+    var _useAwards = (0,_services_awardsServices_js__WEBPACK_IMPORTED_MODULE_2__["default"])(),
         awards = _useAwards.awards,
         getAwardsFront = _useAwards.getAwardsFront,
         loading = _useAwards.loading,
         errors = _useAwards.errors;
 
     var currentDate = new Date().getFullYear();
-    (0,vue__WEBPACK_IMPORTED_MODULE_2__.onMounted)(getAwardsFront(props.year));
+    (0,vue__WEBPACK_IMPORTED_MODULE_1__.onMounted)(getAwardsFront(props.year));
 
     function changeDate(date) {
       getAwardsFront(date);
-      _router_index_js__WEBPACK_IMPORTED_MODULE_5__["default"].push({
-        name: 'awards',
+      _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
+        name: "awards",
         params: {
           year: date
         }
-      }); //location.href = '/news-events/'+date
+      });
     }
 
     var __returned__ = {
@@ -90,14 +86,12 @@ __webpack_require__.r(__webpack_exports__);
       props: props,
       currentDate: currentDate,
       changeDate: changeDate,
-      Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-      SubHeader: _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-      onMounted: vue__WEBPACK_IMPORTED_MODULE_2__.onMounted,
-      ref: vue__WEBPACK_IMPORTED_MODULE_2__.ref,
-      computed: vue__WEBPACK_IMPORTED_MODULE_2__.computed,
-      useAwards: _services_awardsServices_js__WEBPACK_IMPORTED_MODULE_3__["default"],
-      Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-      router: _router_index_js__WEBPACK_IMPORTED_MODULE_5__["default"]
+      SubHeader: _components_SubHeader_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+      onMounted: vue__WEBPACK_IMPORTED_MODULE_1__.onMounted,
+      ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
+      computed: vue__WEBPACK_IMPORTED_MODULE_1__.computed,
+      useAwards: _services_awardsServices_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+      router: _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -181,7 +175,7 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "px-1 h-full bg-gray-400 w-1 md:block hidden"
-}, " ", -1
+}, "   ", -1
 /* HOISTED */
 );
 
@@ -223,7 +217,7 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 var _hoisted_16 = [_hoisted_15];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SubHeader"], {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SubHeader"], {
     title: 'Awards'
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
@@ -266,7 +260,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ), _hoisted_9]), _hoisted_10])])])]);
   }), 128
   /* KEYED_FRAGMENT */
-  )) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, _hoisted_13)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_14, _hoisted_16))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Footer"])], 64
+  )) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, _hoisted_13)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_14, _hoisted_16))])], 64
   /* STABLE_FRAGMENT */
   );
 }

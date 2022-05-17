@@ -8,10 +8,8 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body class="">
-        <div id="app" class="bg-white w-full min-h-screen" style="background-image:url('/img/random-shapes2.svg')">
-            <router-view>
-                <router-view></router-view>
-            </router-view>
+        <div id="app2" class="bg-gray-50 w-full min-h-screen">
+            <back-office></back-office>
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>

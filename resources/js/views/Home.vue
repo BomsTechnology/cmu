@@ -1,18 +1,17 @@
 <script setup>
 import { onMounted, ref, computed } from "vue";
-import Header from "../components/Header.vue";
+
 import Caroussel from "../components/Caroussel.vue";
-import Footer from "../components/Footer.vue";
+
 import usePosts from "../services/postServices.js";
 import useActivities from "../services/activityServices.js";
 
 const { activities, getActivitiesHome, loading } = useActivities();
-const { posts, getPostsHome} = usePosts();
+const { posts, getPostsHome } = usePosts();
 onMounted(getPostsHome(), getActivitiesHome());
 </script>
 
 <template>
-    <Header />
     <Caroussel />
     <!-- Recents publications -->
     <section class="bg-white dark:bg-gray-900">
@@ -43,7 +42,9 @@ onMounted(getPostsHome(), getActivitiesHome());
                         {{ post.title }}
                     </h1>
 
-                    <p class="text-gray-500 dark:text-gray-300 p-6 border-x w-full">
+                    <p
+                        class="text-gray-500 dark:text-gray-300 p-6 border-x w-full"
+                    >
                         {{ post.content.substring(0, 39) + "..." }}
                     </p>
 
@@ -68,13 +69,29 @@ onMounted(getPostsHome(), getActivitiesHome());
                 </div>
             </div>
             <div v-else-if="loading == 1" class="py-10">
-                <svg class="animate-spin h-16 w-16 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                    class="animate-spin h-16 w-16 mx-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                >
+                    <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                    ></circle>
+                    <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
                 </svg>
             </div>
             <div v-else>
-                <p class="text-center text-3xl">NO RESULT</p> 
+                <p class="text-center text-3xl">NO RESULT</p>
             </div>
         </div>
     </section>
@@ -97,7 +114,6 @@ onMounted(getPostsHome(), getActivitiesHome());
                 class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3 md:px-6"
             >
                 <div
-                    
                     v-for="activity in activities"
                     :key="activity.id"
                     class="max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800"
@@ -129,13 +145,29 @@ onMounted(getPostsHome(), getActivitiesHome());
                 </div>
             </div>
             <div v-else-if="loading == 1" class="py-10">
-                <svg class="animate-spin h-16 w-16 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                    class="animate-spin h-16 w-16 mx-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                >
+                    <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                    ></circle>
+                    <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
                 </svg>
             </div>
             <div v-else>
-                <p class="text-center text-3xl">NO RESULT</p> 
+                <p class="text-center text-3xl">NO RESULT</p>
             </div>
         </div>
     </section>
@@ -178,5 +210,4 @@ onMounted(getPostsHome(), getActivitiesHome());
             </div>
         </div>
     </section>
-    <Footer />
 </template>

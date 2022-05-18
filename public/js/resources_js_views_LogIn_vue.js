@@ -269,29 +269,7 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "flex justify-start mt-6"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "px-6 py-2 leading-5 text-sm text-blue-600 transition-colors duration-200 transform hover:underline focus:outline-none"
-}, " Forgot Password ? ")], -1
-/* HOISTED */
-);
-
-var _hoisted_9 = {
-  "class": "border-0 border-t p-4 mt-4 relative flex justify-center"
-};
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "absolute text-sm bg-white -top-3 md:right-[218px] right-[145px] px-2"
-}, " Or ", -1
-/* HOISTED */
-);
-
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Join");
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
-
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SubHeader"], {
     title: 'Log In'
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_1, [$setup.errors != '' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Error"], {
@@ -329,20 +307,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.user.password]])])]), _hoisted_7], 40
   /* PROPS, HYDRATE_EVENTS */
-  , _hoisted_2), _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: {
-      name: 'join'
-    },
-    "class": "px-6 py-2 mx-1 text-sm font-medium leading-5 text-center text-blue-600 transition-colors duration-200 transform bg-white rounded-full hover:bg-blue-700 hover:text-white md:mx-0 md:w-auto",
-    href: "#"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_11];
-    }),
-    _: 1
-    /* STABLE */
-
-  })])])], 64
+  , _hoisted_2), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex justify-start mt-6\">\r\n            <button\r\n                class=\"px-6 py-2 leading-5 text-sm text-blue-600 transition-colors duration-200 transform hover:underline focus:outline-none\"\r\n            >\r\n                Forgot Password ?\r\n            </button>\r\n        </div>\r\n\r\n        <div class=\"border-0 border-t p-4 mt-4 relative flex justify-center\">\r\n            <div\r\n                class=\"absolute text-sm bg-white -top-3 md:right-[218px] right-[145px] px-2\"\r\n            >\r\n                Or\r\n            </div>\r\n            <router-link\r\n                :to=\"{ name: 'join' }\"\r\n                class=\"px-6 py-2 mx-1 text-sm font-medium leading-5 text-center text-blue-600 transition-colors duration-200 transform bg-white rounded-full hover:bg-blue-700 hover:text-white md:mx-0 md:w-auto\"\r\n                href=\"#\"\r\n                >Join</router-link\r\n            >\r\n        </div> ")])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -376,7 +341,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 function useAuth() {
   var user = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
+  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)("");
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
 
   var createUser = /*#__PURE__*/function () {
@@ -390,7 +355,7 @@ function useAuth() {
               _context.prev = 1;
               loading.value = 1;
               _context.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/register', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/register", data);
 
             case 5:
               loading.value = 2;
@@ -431,11 +396,11 @@ function useAuth() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context2.prev = 1;
               loading.value = 1;
               _context2.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/login', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/login", data);
 
             case 5:
               response = _context2.sent;
@@ -443,10 +408,9 @@ function useAuth() {
               console.log(user.value);
               localStorage.user = JSON.stringify(response.data.data.user);
               localStorage.token = response.data.data.token;
-              loading.value = 2;
-              _router__WEBPACK_IMPORTED_MODULE_3__["default"].push({
-                name: "home"
-              });
+              loading.value = 2; // router.push({ name: "home" });
+
+              location.href = "/";
               _context2.next = 18;
               break;
 
@@ -476,11 +440,11 @@ function useAuth() {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context3.prev = 1;
               loading.value = 1;
               _context3.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/login-admin', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/login-admin", data);
 
             case 5:
               response = _context3.sent;
@@ -517,11 +481,11 @@ function useAuth() {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context4.prev = 1;
               loading.value = 1;
               _context4.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/verif-admin', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/verif-admin", data);
 
             case 5:
               response = _context4.sent;

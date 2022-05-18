@@ -20,6 +20,15 @@ class JobOfferController extends Controller
         return JobOfferResource::collection(JobOffer::latest()->get());
     }
 
+    public function jobOffers_others($id)
+    {
+        if ($id != 0) {
+            return JobOfferResource::collection(JobOffer::where('id', '<>', $id)->orderBy('id', 'desc')->limit(4)->get());
+        } else {
+            return JobOfferResource::collection(JobOffer::orderBy('id', 'desc')->limit(4)->get());
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -38,9 +47,9 @@ class JobOfferController extends Controller
      * @param  \App\Models\JobOffer  $jobOffer
      * @return \Illuminate\Http\Response
      */
-    public function show(JobOffer $jobOffer)
+    public function show($jobOffer)
     {
-        return new JobOfferResource($jobOffer);
+        return new JobOfferResource(JobOffer::find($jobOffer));
     }
 
     /**

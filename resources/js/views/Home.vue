@@ -48,8 +48,14 @@ onMounted(getPostsHome(), getActivitiesHome());
                         {{ post.content.substring(0, 39) + "..." }}
                     </p>
 
-                    <a
-                        href="#"
+                    <router-link
+                        :to="{
+                            name: 'single-post',
+                            params: {
+                                type: 'post',
+                                id: post.id,
+                            },
+                        }"
                         class="bg-blue-600 p-3 w-full flex rounded-b-xl shadow-lg items-center justify-center text-sm text-white capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline dark:hover:text-blue-500"
                     >
                         <span class="mx-1">read more</span>
@@ -65,7 +71,7 @@ onMounted(getPostsHome(), getActivitiesHome());
                                 clip-rule="evenodd"
                             ></path>
                         </svg>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div v-else-if="loading == 1" class="py-10">
@@ -118,30 +124,43 @@ onMounted(getPostsHome(), getActivitiesHome());
                     :key="activity.id"
                     class="max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800"
                 >
-                    <img
-                        class="object-cover w-full h-52"
-                        :src="activity.image"
-                        alt="Article"
-                    />
+                    <router-link
+                        :to="{
+                            name: 'single-post',
+                            params: {
+                                type: 'activity',
+                                id: activity.id,
+                            },
+                        }"
+                    >
+                        <img
+                            class="object-cover w-full h-52"
+                            :src="activity.image"
+                            alt="Article"
+                        />
 
-                    <div class="p-6">
-                        <div>
-                            <span
-                                class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400"
-                                >{{ activity.type }}</span
-                            >
-                            <a
-                                href="#"
-                                class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline"
-                                >{{ activity.title }}</a
-                            >
-                            <p
-                                class="mt-2 text-sm text-gray-600 dark:text-gray-400"
-                            >
-                                {{ activity.content.substring(0, 49) + "..." }}
-                            </p>
+                        <div class="p-6">
+                            <div>
+                                <span
+                                    class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400"
+                                    >{{ activity.type }}</span
+                                >
+                                <a
+                                    href="#"
+                                    class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline"
+                                    >{{ activity.title }}</a
+                                >
+                                <p
+                                    class="mt-2 text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    {{
+                                        activity.content.substring(0, 49) +
+                                        "..."
+                                    }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
             <div v-else-if="loading == 1" class="py-10">

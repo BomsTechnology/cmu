@@ -38,7 +38,9 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                     {{ member.field_research }}
                 </h3>
                 <h4 class="md:text-sm text-xs mt-4">
-                    <span>{{ member.university.name }}</span>
+                    <span v-if="member.university">{{
+                        member.university.name
+                    }}</span>
                     <span class="ml-4 text-blue-500 hover:underline"
                         >@researchgateaccount
                     </span>
@@ -56,7 +58,7 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
     <!-- cv -->
     <div class="lg:flex">
         <div class="lg:w-[80%]">
-            <div class="shadow my-6 mx-2">
+            <div class="my-6 mx-2">
                 <div class="border-0 border-b-2 p-4">
                     <h1 class="font-extrabold text-2xl text-gray-700">
                         Auto-Biography & CV
@@ -71,7 +73,7 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                 </div>
             </div>
             <!-- publications -->
-            <div class="shadow my-6 mx-2 px-4">
+            <div class="my-6 mx-2 px-4">
                 <div class="border-0 border-b-2 p-4">
                     <h1 class="font-extrabold text-2xl text-gray-700">
                         Publications
@@ -93,7 +95,7 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
         </div>
 
         <div class="lg:w-[20%]">
-            <div class="shadow my-6 mx-2 px-4">
+            <div class="my-6 mx-2 px-4">
                 <div class="border-0 border-b-2 p-4">
                     <h1 class="font-extrabold text-2xl text-gray-700">
                         Thesis
@@ -166,7 +168,7 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                     <p class="text-center text-lg py-8">No Thesis</p>
                 </div>
             </div>
-            <div class="shadow my-6 mx-2 px-4">
+            <!-- <div class="my-6 mx-2 px-4">
                 <div class="border-0 border-b-2 p-4">
                     <h1 class="font-extrabold text-2xl text-gray-700">
                         Supervision
@@ -176,7 +178,7 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                     <p class="text-center text-lg py-8">No Student Supervise</p>
                 </div>
 
-                <!-- <div class="py-4">
+                 <div class="py-4">
                 <div class="w-full md:h-28 md:flex justify-between shadow-md border">
                    <div class="p-2 w-full text-center md:text-left">
                        <h3 class="text-md font-bold">ETA CYRIL</h3>
@@ -184,8 +186,8 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                            <p class="text-sm font-light mt-2">University of Douala - 2021</p>
                    </div>
                 </div>   
+            </div> 
             </div> -->
-            </div>
         </div>
     </div>
 </template>

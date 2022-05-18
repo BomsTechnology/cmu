@@ -64,7 +64,7 @@ const login = async () => {
             </div>
         </form>
 
-        <div class="flex justify-start mt-6">
+        <!-- <div class="flex justify-start mt-6">
             <button
                 class="px-6 py-2 leading-5 text-sm text-blue-600 transition-colors duration-200 transform hover:underline focus:outline-none"
             >
@@ -84,6 +84,6 @@ const login = async () => {
                 href="#"
                 >Join</router-link
             >
-        </div>
+        </div> -->
     </section>
 </template>

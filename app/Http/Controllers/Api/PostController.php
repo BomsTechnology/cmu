@@ -25,6 +25,15 @@ class PostController extends Controller
         return PostResource::collection(Post::orderBy('id', 'desc')->limit(3)->get());
     }
 
+    public function post_others($id)
+    {
+        if ($id != 0) {
+            return PostResource::collection(Post::where('id', '<>', $id)->orderBy('id', 'desc')->limit(4)->get());
+        } else {
+            return PostResource::collection(Post::orderBy('id', 'desc')->limit(4)->get());
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -45,17 +54,17 @@ class PostController extends Controller
             'user_id' => $fileds['user_id'],
         ];
 
-        if($request->file('image')){
+        if ($request->file('image')) {
             $request->validate([
                 'image' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('image')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('image')->extension();
             $request->file('image')->storePubliclyAs('public', $filename);
             $data['image'] = $filename;
         }
-      
+
         $post = Post::create($data);
-    
+
         return new PostResource($post);
     }
 
@@ -65,9 +74,9 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($post)
     {
-        return new PostResource($post);
+        return new PostResource(Post::find($post));
     }
     public function show2(Post $post)
     {
@@ -93,11 +102,11 @@ class PostController extends Controller
             'content' => $fileds['content'],
         ];
 
-        if($request->file('image')){
+        if ($request->file('image')) {
             $request->validate([
                 'image' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('image')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('image')->extension();
             $request->file('image')->storePubliclyAs('public', $filename);
             $data['image'] = $filename;
         }

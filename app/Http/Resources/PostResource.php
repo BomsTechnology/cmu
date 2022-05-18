@@ -22,7 +22,7 @@ class PostResource extends JsonResource
             'image' => $this->image,
             'status' => $this->status,
             'user' => User::find($this->user_id),
-            'date' => $this->created_at->format('Y-m-d'),
+            'date' => $this->created_at,
         ];
     }
 }

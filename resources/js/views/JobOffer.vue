@@ -92,7 +92,16 @@ const filteredJobOffer = computed({
                     :key="job.id"
                     class="w-full md:h-28 md:flex justify-between shadow border"
                 >
-                    <div class="md:w-1/5 p-2">
+                    <router-link
+                        :to="{
+                            name: 'single-post',
+                            params: {
+                                type: 'job',
+                                id: job.id,
+                            },
+                        }"
+                        class="md:w-1/5 p-2"
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="md:h-full md:w-full h-32 mx-auto text-gray-600"
@@ -108,13 +117,23 @@ const filteredJobOffer = computed({
                                 d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
                             />
                         </svg>
-                    </div>
+                    </router-link>
                     <div
                         class="p-2 text-center w-full md:text-left border-0 border-l px-2"
                     >
                         <div class="p-2 text-center md:text-left">
                             <div class="flex justify-between items-center">
-                                <h3 class="text-md">{{ job.title }}</h3>
+                                <router-link
+                                    :to="{
+                                        name: 'single-post',
+                                        params: {
+                                            type: 'job',
+                                            id: job.id,
+                                        },
+                                    }"
+                                    class="text-md"
+                                    >{{ job.title }}</router-link
+                                >
                                 <a
                                     :href="job.website"
                                     class="flex text-sm text-blue-600 hover:underline"
@@ -139,10 +158,16 @@ const filteredJobOffer = computed({
                             <p class="text-sm font-light mt-2">
                                 {{ job.content.substring(0, 19) + "..." }}
                             </p>
-                            <a
-                                href="#"
+                            <router-link
+                                :to="{
+                                    name: 'single-post',
+                                    params: {
+                                        type: 'job',
+                                        id: job.id,
+                                    },
+                                }"
                                 class="text-sm text-blue-600 mt-2 hover:underline"
-                                >Read More</a
+                                >Read More</router-link
                             >
                         </div>
                     </div>

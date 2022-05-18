@@ -367,7 +367,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 function useAuth() {
   var user = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
+  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)("");
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
 
   var createUser = /*#__PURE__*/function () {
@@ -381,7 +381,7 @@ function useAuth() {
               _context.prev = 1;
               loading.value = 1;
               _context.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/register', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/register", data);
 
             case 5:
               loading.value = 2;
@@ -422,11 +422,11 @@ function useAuth() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context2.prev = 1;
               loading.value = 1;
               _context2.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/login', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/login", data);
 
             case 5:
               response = _context2.sent;
@@ -434,10 +434,9 @@ function useAuth() {
               console.log(user.value);
               localStorage.user = JSON.stringify(response.data.data.user);
               localStorage.token = response.data.data.token;
-              loading.value = 2;
-              _router__WEBPACK_IMPORTED_MODULE_3__["default"].push({
-                name: "home"
-              });
+              loading.value = 2; // router.push({ name: "home" });
+
+              location.href = "/";
               _context2.next = 18;
               break;
 
@@ -467,11 +466,11 @@ function useAuth() {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context3.prev = 1;
               loading.value = 1;
               _context3.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/login-admin', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/login-admin", data);
 
             case 5:
               response = _context3.sent;
@@ -508,11 +507,11 @@ function useAuth() {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context4.prev = 1;
               loading.value = 1;
               _context4.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/verif-admin', data);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/verif-admin", data);
 
             case 5:
               response = _context4.sent;

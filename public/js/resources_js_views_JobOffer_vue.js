@@ -194,9 +194,7 @@ var _hoisted_11 = {
   "class": "flex flex-col space-y-4 items-center px-6"
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "md:w-1/5 p-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   "class": "md:h-full md:w-full h-32 mx-auto text-gray-600",
   viewBox: "0 0 20 20",
@@ -207,7 +205,7 @@ var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "clip-rule": "evenodd"
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
   d: "M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
-})])], -1
+})], -1
 /* HOISTED */
 );
 
@@ -220,12 +218,9 @@ var _hoisted_14 = {
 var _hoisted_15 = {
   "class": "flex justify-between items-center"
 };
-var _hoisted_16 = {
-  "class": "text-md"
-};
-var _hoisted_17 = ["href"];
+var _hoisted_16 = ["href"];
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   "class": "h-5 w-5 mr-1",
   viewBox: "0 0 20 20",
@@ -238,34 +233,29 @@ var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Website", -1
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Website", -1
 /* HOISTED */
 );
 
-var _hoisted_20 = [_hoisted_18, _hoisted_19];
-var _hoisted_21 = {
+var _hoisted_19 = [_hoisted_17, _hoisted_18];
+var _hoisted_20 = {
   "class": "text-sm font-light mt-2"
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "text-sm text-blue-600 mt-2 hover:underline"
-}, "Read More", -1
-/* HOISTED */
-);
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Read More");
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "px-1 h-full bg-gray-400 w-1 md:block hidden"
 }, "   ", -1
 /* HOISTED */
 );
 
-var _hoisted_24 = {
+var _hoisted_23 = {
   key: 1,
   "class": "py-10"
 };
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "animate-spin h-16 w-16 mx-auto",
   xmlns: "http://www.w3.org/2000/svg",
   fill: "none",
@@ -285,19 +275,21 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_26 = [_hoisted_25];
-var _hoisted_27 = {
+var _hoisted_25 = [_hoisted_24];
+var _hoisted_26 = {
   key: 2
 };
 
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-center text-3xl"
 }, "NO RESULT", -1
 /* HOISTED */
 );
 
-var _hoisted_29 = [_hoisted_28];
+var _hoisted_28 = [_hoisted_27];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SubHeader"], {
     title: 'Job Offer'
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -316,19 +308,73 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: job.id,
       "class": "w-full md:h-28 md:flex justify-between shadow border"
-    }, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(job.title), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      to: {
+        name: 'single-post',
+        params: {
+          type: 'job',
+          id: job.id
+        }
+      },
+      "class": "md:w-1/5 p-2"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_12];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      to: {
+        name: 'single-post',
+        params: {
+          type: 'job',
+          id: job.id
+        }
+      },
+      "class": "text-md"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(job.title), 1
+        /* TEXT */
+        )];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       href: job.website,
       "class": "flex text-sm text-blue-600 hover:underline"
-    }, _hoisted_20, 8
+    }, _hoisted_19, 8
     /* PROPS */
-    , _hoisted_17)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(job.content.substring(0, 19) + "..."), 1
+    , _hoisted_16)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(job.content.substring(0, 19) + "..."), 1
     /* TEXT */
-    ), _hoisted_22])]), _hoisted_23]);
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      to: {
+        name: 'single-post',
+        params: {
+          type: 'job',
+          id: job.id
+        }
+      },
+      "class": "text-sm text-blue-600 mt-2 hover:underline"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_21];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["to"])])]), _hoisted_22]);
   }), 128
   /* KEYED_FRAGMENT */
-  )) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_24, _hoisted_26)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_27, _hoisted_29))])])])], 64
+  )) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_23, _hoisted_25)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_26, _hoisted_28))])])])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -363,7 +409,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 function useJobOffers() {
   var jobOffers = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
   var jobOffer = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
+  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)("");
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
 
   var getJobOffers = /*#__PURE__*/function () {
@@ -373,12 +419,12 @@ function useJobOffers() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/jobOffers', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/jobOffers", {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -400,28 +446,31 @@ function useJobOffers() {
     };
   }();
 
-  var getJobOffer = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(id) {
-      var response;
+  var getOtherJobOffers = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var id,
+          response,
+          _args2 = arguments;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              errors.value = '';
+              id = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : 0;
+              errors.value = "";
               loading.value = 1;
-              _context2.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/jobOffers/' + id, {
+              _context2.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/jobOffers-others/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 4:
+            case 5:
               response = _context2.sent;
-              loading.value = 0;
-              jobOffer.value = response.data.data;
+              jobOffers.value = response.data.data;
+              loading.value = 2; // console.log(jobOffers.value);
 
-            case 7:
+            case 8:
             case "end":
               return _context2.stop();
           }
@@ -429,98 +478,83 @@ function useJobOffers() {
       }, _callee2);
     }));
 
-    return function getJobOffer(_x) {
+    return function getOtherJobOffers() {
       return _ref2.apply(this, arguments);
     };
   }();
 
-  var createJobOffer = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(data) {
-      var key;
+  var getJobOffer = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(id) {
+      var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              errors.value = '';
-              _context3.prev = 1;
+              errors.value = "";
               loading.value = 1;
-              _context3.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/jobOffers', data, {
+              _context3.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/jobOffers/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 5:
-              loading.value = 2;
-              _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
-                name: 'admin.job.index'
-              });
-              _context3.next = 12;
-              break;
+            case 4:
+              response = _context3.sent;
+              loading.value = 0;
+              jobOffer.value = response.data.data;
 
-            case 9:
-              _context3.prev = 9;
-              _context3.t0 = _context3["catch"](1);
-
-              if (_context3.t0.response.status == 422) {
-                loading.value = 0;
-
-                for (key in _context3.t0.response.data.errors) {
-                  errors.value += _context3.t0.response.data.errors[key][0] + "\n";
-                }
-              }
-
-            case 12:
+            case 7:
             case "end":
               return _context3.stop();
           }
         }
-      }, _callee3, null, [[1, 9]]);
+      }, _callee3);
     }));
 
-    return function createJobOffer(_x2) {
+    return function getJobOffer(_x) {
       return _ref3.apply(this, arguments);
     };
   }();
 
-  var updateJobOffer = /*#__PURE__*/function () {
-    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id) {
+  var createJobOffer = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(data) {
       var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context4.prev = 1;
               loading.value = 1;
               _context4.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().put('/api/jobOffers/' + id, jobOffer.value, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/jobOffers", data, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
             case 5:
               loading.value = 2;
               _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
-                name: 'admin.job.index'
+                name: "admin.job.index"
               });
-              _context4.next = 13;
+              _context4.next = 12;
               break;
 
             case 9:
               _context4.prev = 9;
               _context4.t0 = _context4["catch"](1);
-              loading.value = 0;
 
               if (_context4.t0.response.status == 422) {
+                loading.value = 0;
+
                 for (key in _context4.t0.response.data.errors) {
-                  errors.value += _context4.t0.response.data.errors[key][0] + '\t\n';
+                  errors.value += _context4.t0.response.data.errors[key][0] + "\n";
                 }
               }
 
-            case 13:
+            case 12:
             case "end":
               return _context4.stop();
           }
@@ -528,51 +562,100 @@ function useJobOffers() {
       }, _callee4, null, [[1, 9]]);
     }));
 
-    return function updateJobOffer(_x3) {
+    return function createJobOffer(_x2) {
       return _ref4.apply(this, arguments);
     };
   }();
 
-  var destroyJobOffer = /*#__PURE__*/function () {
+  var updateJobOffer = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(id) {
+      var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context5.prev = 1;
               loading.value = 1;
               _context5.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/jobOffers/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().put("/api/jobOffers/" + id, jobOffer.value, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
             case 5:
               loading.value = 2;
-              _context5.next = 12;
+              _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
+                name: "admin.job.index"
+              });
+              _context5.next = 13;
               break;
 
-            case 8:
-              _context5.prev = 8;
+            case 9:
+              _context5.prev = 9;
               _context5.t0 = _context5["catch"](1);
               loading.value = 0;
 
-              if (_context5.t0.response.status == '500') {
-                errors.value = 'Impossible de supprimer ce pays';
+              if (_context5.t0.response.status == 422) {
+                for (key in _context5.t0.response.data.errors) {
+                  errors.value += _context5.t0.response.data.errors[key][0] + "\t\n";
+                }
               }
 
-            case 12:
+            case 13:
             case "end":
               return _context5.stop();
           }
         }
-      }, _callee5, null, [[1, 8]]);
+      }, _callee5, null, [[1, 9]]);
+    }));
+
+    return function updateJobOffer(_x3) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
+
+  var destroyJobOffer = /*#__PURE__*/function () {
+    var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(id) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+        while (1) {
+          switch (_context6.prev = _context6.next) {
+            case 0:
+              errors.value = "";
+              _context6.prev = 1;
+              loading.value = 1;
+              _context6.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/jobOffers/" + id, {
+                headers: {
+                  Authorization: "Bearer ".concat(localStorage.token)
+                }
+              });
+
+            case 5:
+              loading.value = 2;
+              _context6.next = 12;
+              break;
+
+            case 8:
+              _context6.prev = 8;
+              _context6.t0 = _context6["catch"](1);
+              loading.value = 0;
+
+              if (_context6.t0.response.status == "500") {
+                errors.value = "Impossible de supprimer ce pays";
+              }
+
+            case 12:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, _callee6, null, [[1, 8]]);
     }));
 
     return function destroyJobOffer(_x4) {
-      return _ref5.apply(this, arguments);
+      return _ref6.apply(this, arguments);
     };
   }();
 
@@ -581,6 +664,7 @@ function useJobOffers() {
     jobOffer: jobOffer,
     errors: errors,
     loading: loading,
+    getOtherJobOffers: getOtherJobOffers,
     getJobOffers: getJobOffers,
     getJobOffer: getJobOffer,
     createJobOffer: createJobOffer,

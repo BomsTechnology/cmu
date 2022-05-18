@@ -100,7 +100,6 @@ const filteredMember = computed({
                             id: member.id,
                         },
                     }"
-                    v
                     class="flex flex-col items-center pt-9 text-center space-y-1 rounded-xl dark:bg-gray-800 border border-gray-300"
                 >
                     <img

@@ -4,14 +4,14 @@ import router from "../router";
 
 export default function useAuth() {
     const user = ref([]);
-    const errors = ref('');
+    const errors = ref("");
     const loading = ref(0);
 
     const createUser = async (data) => {
         errors.value = "";
         try {
             loading.value = 1;
-            await axios.post('/api/register', data);
+            await axios.post("/api/register", data);
             loading.value = 2;
             router.push({ name: "login" });
         } catch (e) {
@@ -24,52 +24,51 @@ export default function useAuth() {
     };
 
     const loginUser = async (data) => {
-        errors.value = ''; 
+        errors.value = "";
         try {
             loading.value = 1;
-            let response = await axios.post('/api/login', data);
+            let response = await axios.post("/api/login", data);
             user.value = response.data.data;
             console.log(user.value);
             localStorage.user = JSON.stringify(response.data.data.user);
             localStorage.token = response.data.data.token;
             loading.value = 2;
-            router.push({ name: "home" });
+            // router.push({ name: "home" });
+            location.href = "/";
         } catch (e) {
-                    loading.value = 0;
-                    errors.value = "invalid email or password";
-
+            loading.value = 0;
+            errors.value = "invalid email or password";
         }
     };
 
     const loginAdmin = async (data) => {
-        errors.value = ''; 
+        errors.value = "";
         try {
             loading.value = 1;
-            let response = await axios.post('/api/login-admin', data);
+            let response = await axios.post("/api/login-admin", data);
             localStorage.user = JSON.stringify(response.data.data.user);
             localStorage.token = response.data.data.token;
             location.href = "/admin/dashboard";
             loading.value = 2;
         } catch (e) {
-                    loading.value = 0;
-                    errors.value = "invalid email or password";
-
+            loading.value = 0;
+            errors.value = "invalid email or password";
         }
     };
 
     const verifAdmin = async (data) => {
-        errors.value = ''; 
+        errors.value = "";
         try {
             loading.value = 1;
-            let response = await axios.post('/api/verif-admin', data);
+            let response = await axios.post("/api/verif-admin", data);
             user.value = response.data.data;
             console.log(user.value);
             loading.value = 2;
             return true;
         } catch (e) {
-                    loading.value = 0;
-                    errors.value = "Your not a admin";
-                    router.push({ name: "admin" });
+            loading.value = 0;
+            errors.value = "Your not a admin";
+            router.push({ name: "admin" });
         }
     };
 
@@ -81,6 +80,5 @@ export default function useAuth() {
         loginUser,
         loginAdmin,
         verifAdmin,
-        
-    }
+    };
 }

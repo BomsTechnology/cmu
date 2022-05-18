@@ -381,7 +381,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 function useJobOffers() {
   var jobOffers = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
   var jobOffer = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
+  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)("");
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
 
   var getJobOffers = /*#__PURE__*/function () {
@@ -391,12 +391,12 @@ function useJobOffers() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/jobOffers', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/jobOffers", {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -418,28 +418,31 @@ function useJobOffers() {
     };
   }();
 
-  var getJobOffer = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(id) {
-      var response;
+  var getOtherJobOffers = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var id,
+          response,
+          _args2 = arguments;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              errors.value = '';
+              id = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : 0;
+              errors.value = "";
               loading.value = 1;
-              _context2.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/jobOffers/' + id, {
+              _context2.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/jobOffers-others/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 4:
+            case 5:
               response = _context2.sent;
-              loading.value = 0;
-              jobOffer.value = response.data.data;
+              jobOffers.value = response.data.data;
+              loading.value = 2; // console.log(jobOffers.value);
 
-            case 7:
+            case 8:
             case "end":
               return _context2.stop();
           }
@@ -447,98 +450,83 @@ function useJobOffers() {
       }, _callee2);
     }));
 
-    return function getJobOffer(_x) {
+    return function getOtherJobOffers() {
       return _ref2.apply(this, arguments);
     };
   }();
 
-  var createJobOffer = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(data) {
-      var key;
+  var getJobOffer = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(id) {
+      var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              errors.value = '';
-              _context3.prev = 1;
+              errors.value = "";
               loading.value = 1;
-              _context3.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/jobOffers', data, {
+              _context3.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/jobOffers/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 5:
-              loading.value = 2;
-              _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
-                name: 'admin.job.index'
-              });
-              _context3.next = 12;
-              break;
+            case 4:
+              response = _context3.sent;
+              loading.value = 0;
+              jobOffer.value = response.data.data;
 
-            case 9:
-              _context3.prev = 9;
-              _context3.t0 = _context3["catch"](1);
-
-              if (_context3.t0.response.status == 422) {
-                loading.value = 0;
-
-                for (key in _context3.t0.response.data.errors) {
-                  errors.value += _context3.t0.response.data.errors[key][0] + "\n";
-                }
-              }
-
-            case 12:
+            case 7:
             case "end":
               return _context3.stop();
           }
         }
-      }, _callee3, null, [[1, 9]]);
+      }, _callee3);
     }));
 
-    return function createJobOffer(_x2) {
+    return function getJobOffer(_x) {
       return _ref3.apply(this, arguments);
     };
   }();
 
-  var updateJobOffer = /*#__PURE__*/function () {
-    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id) {
+  var createJobOffer = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(data) {
       var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context4.prev = 1;
               loading.value = 1;
               _context4.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().put('/api/jobOffers/' + id, jobOffer.value, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/jobOffers", data, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
             case 5:
               loading.value = 2;
               _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
-                name: 'admin.job.index'
+                name: "admin.job.index"
               });
-              _context4.next = 13;
+              _context4.next = 12;
               break;
 
             case 9:
               _context4.prev = 9;
               _context4.t0 = _context4["catch"](1);
-              loading.value = 0;
 
               if (_context4.t0.response.status == 422) {
+                loading.value = 0;
+
                 for (key in _context4.t0.response.data.errors) {
-                  errors.value += _context4.t0.response.data.errors[key][0] + '\t\n';
+                  errors.value += _context4.t0.response.data.errors[key][0] + "\n";
                 }
               }
 
-            case 13:
+            case 12:
             case "end":
               return _context4.stop();
           }
@@ -546,51 +534,100 @@ function useJobOffers() {
       }, _callee4, null, [[1, 9]]);
     }));
 
-    return function updateJobOffer(_x3) {
+    return function createJobOffer(_x2) {
       return _ref4.apply(this, arguments);
     };
   }();
 
-  var destroyJobOffer = /*#__PURE__*/function () {
+  var updateJobOffer = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(id) {
+      var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context5.prev = 1;
               loading.value = 1;
               _context5.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/jobOffers/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().put("/api/jobOffers/" + id, jobOffer.value, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
             case 5:
               loading.value = 2;
-              _context5.next = 12;
+              _router_index_js__WEBPACK_IMPORTED_MODULE_3__["default"].push({
+                name: "admin.job.index"
+              });
+              _context5.next = 13;
               break;
 
-            case 8:
-              _context5.prev = 8;
+            case 9:
+              _context5.prev = 9;
               _context5.t0 = _context5["catch"](1);
               loading.value = 0;
 
-              if (_context5.t0.response.status == '500') {
-                errors.value = 'Impossible de supprimer ce pays';
+              if (_context5.t0.response.status == 422) {
+                for (key in _context5.t0.response.data.errors) {
+                  errors.value += _context5.t0.response.data.errors[key][0] + "\t\n";
+                }
               }
 
-            case 12:
+            case 13:
             case "end":
               return _context5.stop();
           }
         }
-      }, _callee5, null, [[1, 8]]);
+      }, _callee5, null, [[1, 9]]);
+    }));
+
+    return function updateJobOffer(_x3) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
+
+  var destroyJobOffer = /*#__PURE__*/function () {
+    var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(id) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+        while (1) {
+          switch (_context6.prev = _context6.next) {
+            case 0:
+              errors.value = "";
+              _context6.prev = 1;
+              loading.value = 1;
+              _context6.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/jobOffers/" + id, {
+                headers: {
+                  Authorization: "Bearer ".concat(localStorage.token)
+                }
+              });
+
+            case 5:
+              loading.value = 2;
+              _context6.next = 12;
+              break;
+
+            case 8:
+              _context6.prev = 8;
+              _context6.t0 = _context6["catch"](1);
+              loading.value = 0;
+
+              if (_context6.t0.response.status == "500") {
+                errors.value = "Impossible de supprimer ce pays";
+              }
+
+            case 12:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, _callee6, null, [[1, 8]]);
     }));
 
     return function destroyJobOffer(_x4) {
-      return _ref5.apply(this, arguments);
+      return _ref6.apply(this, arguments);
     };
   }();
 
@@ -599,6 +636,7 @@ function useJobOffers() {
     jobOffer: jobOffer,
     errors: errors,
     loading: loading,
+    getOtherJobOffers: getOtherJobOffers,
     getJobOffers: getJobOffers,
     getJobOffer: getJobOffer,
     createJobOffer: createJobOffer,

@@ -82,12 +82,31 @@ function changeDate(date) {
                         v-for="n in news"
                         :key="n.id"
                     >
-                        <img
-                            :src="n.image"
-                            class="md:w-32 md:h-full object-cover w-full h-24"
-                            alt=""
-                        />
-                        <div class="p-2 text-center md:text-left w-full">
+                        <router-link
+                            :to="{
+                                name: 'single-post',
+                                params: {
+                                    type: 'activity',
+                                    id: n.id,
+                                },
+                            }"
+                        >
+                            <img
+                                :src="n.image"
+                                class="md:w-32 md:h-full object-cover w-full h-24"
+                                alt=""
+                            />
+                        </router-link>
+                        <router-link
+                            :to="{
+                                name: 'single-post',
+                                params: {
+                                    type: 'activity',
+                                    id: n.id,
+                                },
+                            }"
+                            class="p-2 text-center md:text-left w-full"
+                        >
                             <h3 class="text-md">{{ n.title }}</h3>
                             <p class="text-sm font-light mt-2">
                                 {{ n.content.substring(0, 19) + "..." }}
@@ -97,7 +116,7 @@ function changeDate(date) {
                                 class="text-sm text-blue-600 mt-2 hover:underline"
                                 >Read More</a
                             >
-                        </div>
+                        </router-link>
                         <div
                             class="px-1 h-full bg-gray-400 w-1 md:block hidden"
                         >
@@ -142,12 +161,31 @@ function changeDate(date) {
                         v-for="event in events"
                         :key="event.id"
                     >
-                        <img
-                            :src="event.image"
-                            class="md:w-32 md:h-full object-cover w-full h-24"
-                            alt=""
-                        />
-                        <div class="p-2 text-center md:text-left w-full">
+                        <router-link
+                            :to="{
+                                name: 'single-post',
+                                params: {
+                                    type: 'activity',
+                                    id: event.id,
+                                },
+                            }"
+                        >
+                            <img
+                                :src="event.image"
+                                class="md:w-32 md:h-full object-cover w-full h-24"
+                                alt=""
+                            />
+                        </router-link>
+                        <router-link
+                            :to="{
+                                name: 'single-post',
+                                params: {
+                                    type: 'activity',
+                                    id: event.id,
+                                },
+                            }"
+                            class="p-2 text-center md:text-left w-full"
+                        >
                             <h3 class="text-md">{{ event.title }}</h3>
                             <p class="text-sm font-light mt-2">
                                 {{ event.content.substring(0, 19) + "..." }}
@@ -155,7 +193,7 @@ function changeDate(date) {
                             <a href="#" class="text-sm text-blue-600 mt-2"
                                 >Read More</a
                             >
-                        </div>
+                        </router-link>
                         <div
                             class="px-1 h-full bg-gray-400 w-1 md:block hidden"
                         >

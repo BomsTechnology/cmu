@@ -24,14 +24,23 @@ class ActivityController extends Controller
         return ActivityResource::collection(Activity::orderBy('id', 'desc')->limit(6)->get());
     }
 
+    public function activity_others($id)
+    {
+        if ($id != 0) {
+            return ActivityResource::collection(Activity::where('id', '<>', $id)->orderBy('id', 'desc')->limit(4)->get());
+        } else {
+            return ActivityResource::collection(Activity::orderBy('id', 'desc')->limit(4)->get());
+        }
+    }
+
     public function get_by_year($year)
     {
-        if($year == 'previous'){
-            $syear = (((int) date("Y")) - 2).'-01-01';
+        if ($year == 'previous') {
+            $syear = (((int) date("Y")) - 2) . '-01-01';
             return ActivityResource::collection(Activity::where('activity_date', '<', $syear)->orderBy('id', 'desc')->get());
-        }else{
-            $startDate = $year.'-01-01';
-            $endDate = $year.'-12-31';
+        } else {
+            $startDate = $year . '-01-01';
+            $endDate = $year . '-12-31';
             return ActivityResource::collection(Activity::whereBetween('activity_date', [$startDate, $endDate])->orderBy('id', 'desc')->get());
         }
     }
@@ -60,18 +69,18 @@ class ActivityController extends Controller
             'user_id' => $fileds['user_id'],
         ];
 
-        if($request->file('image')){
+        if ($request->file('image')) {
             $request->validate([
                 'image' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('image')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('image')->extension();
             $request->file('image')->storePubliclyAs('public', $filename);
             $data['image'] = $filename;
         }
-      
-    $activity = Activity::create($data);
-   
-    return new ActivityResource($activity);
+
+        $activity = Activity::create($data);
+
+        return new ActivityResource($activity);
     }
 
     /**
@@ -108,11 +117,11 @@ class ActivityController extends Controller
             'type' => $fileds['type'],
         ];
 
-        if($request->file('image')){
+        if ($request->file('image')) {
             $request->validate([
                 'image' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('image')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('image')->extension();
             $request->file('image')->storePubliclyAs('public', $filename);
             $data['image'] = $filename;
         }

@@ -17,10 +17,12 @@ Route::post("/login-admin",[AuthController::class,'login_admin']);
 
 Route::get("/activities-front/{year}", [ActivityController::class,'get_by_year']);
 Route::get("/activities-home", [ActivityController::class,'activity_home']);
+Route::get("/activities-others/{id}", [ActivityController::class,'activity_others']);
 Route::get("/activities2/{activity}", [ActivityController::class,'show2']);
 Route::get("/activities", [ActivityController::class, 'index']);
 Route::get("/activities/{activity}", [ActivityController::class, 'show']);
 
+Route::get("/awards-others/{id}", [AwardsController::class,'awards_others']);
 Route::get("/awards-front/{year}", [AwardsController::class,'get_by_year']);
 Route::get("/awards", [AwardsController::class, 'index']);
 Route::get("/awards/{awards}", [AwardsController::class, 'show']);
@@ -40,6 +42,7 @@ Route::get("/theses-user/{user}",[ThesesController::class,'theses_user']);
 Route::get("/jobOffers", [JobOfferController::class, 'index']);
 Route::get("/jobOffers2/{jobOffers}", [JobOfferController::class,'show2']);
 Route::get("/jobOffers/{jobOffers}", [JobOfferController::class, 'show']);
+Route::get("/jobOffers-others/{id}", [JobOfferController::class, 'jobOffers_others']);
 
 // ----------------------------------
 Route::get("/posts2/{post}", [PostController::class,'show2']);
@@ -47,6 +50,7 @@ Route::get("/posts", [PostController::class, 'index']);
 Route::get("/posts/{posts}", [PostController::class, 'show']);
 Route::get("/posts-user/{user}",[PostController::class,'post_user']);
 Route::get("/posts-home",[PostController::class,'post_home']);
+Route::get("/posts-others/{id}",[PostController::class,'post_others']);
 
 Route::group(['middleware' => ['auth:sanctum']], function(){
 

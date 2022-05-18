@@ -75,7 +75,14 @@ function changeDate(date) {
             v-for="award in awards"
             :key="award.id"
         >
-            <div
+            <router-link
+                :to="{
+                    name: 'single-post',
+                    params: {
+                        type: 'awards',
+                        id: award.id,
+                    },
+                }"
                 class="lg:h-full h-[600px] block w-full border-0 lg:border-r-2 px-4"
             >
                 <div class="h-full py-4">
@@ -100,7 +107,7 @@ function changeDate(date) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </router-link>
         </div>
         <div v-else-if="loading == 1" class="py-10">
             <svg

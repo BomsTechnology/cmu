@@ -269,7 +269,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           id: member.id
         }
       },
-      v: "",
       "class": "flex flex-col items-center pt-9 text-center space-y-1 rounded-xl dark:bg-gray-800 border border-gray-300"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

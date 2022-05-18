@@ -336,12 +336,13 @@ var _hoisted_7 = {
   "class": "text-gray-500 dark:text-gray-300 p-6 border-x w-full"
 };
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "bg-blue-600 p-3 w-full flex rounded-b-xl shadow-lg items-center justify-center text-sm text-white capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline dark:hover:text-blue-500"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "mx-1"
-}, "read more"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+}, "read more", -1
+/* HOISTED */
+);
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "w-4 h-4 mx-1",
   fill: "currentColor",
   viewBox: "0 0 20 20",
@@ -350,16 +351,16 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "fill-rule": "evenodd",
   d: "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
   "clip-rule": "evenodd"
-})])], -1
+})], -1
 /* HOISTED */
 );
 
-var _hoisted_9 = {
+var _hoisted_10 = {
   key: 1,
   "class": "py-10"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "animate-spin h-16 w-16 mx-auto",
   xmlns: "http://www.w3.org/2000/svg",
   fill: "none",
@@ -379,61 +380,61 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = [_hoisted_10];
-var _hoisted_12 = {
+var _hoisted_12 = [_hoisted_11];
+var _hoisted_13 = {
   key: 2
 };
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-center text-3xl"
 }, "NO RESULT", -1
 /* HOISTED */
 );
 
-var _hoisted_14 = [_hoisted_13];
-var _hoisted_15 = {
+var _hoisted_15 = [_hoisted_14];
+var _hoisted_16 = {
   "class": "bg-gray-100 dark:bg-gray-900"
 };
-var _hoisted_16 = {
+var _hoisted_17 = {
   "class": "container md:px-16 px-6 py-10 mx-auto"
 };
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-3xl font-semibold text-blue-600 capitalize lg:text-4xl dark:text-white"
 }, " News & Events ", -1
 /* HOISTED */
 );
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-4 text-gray-500 xl:mt-6 dark:text-gray-300"
 }, " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus ", -1
 /* HOISTED */
 );
 
-var _hoisted_19 = {
+var _hoisted_20 = {
   key: 0,
   "class": "grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3 md:px-6"
 };
-var _hoisted_20 = ["src"];
-var _hoisted_21 = {
+var _hoisted_21 = ["src"];
+var _hoisted_22 = {
   "class": "p-6"
 };
-var _hoisted_22 = {
+var _hoisted_23 = {
   "class": "text-xs font-medium text-blue-600 uppercase dark:text-blue-400"
 };
-var _hoisted_23 = {
+var _hoisted_24 = {
   href: "#",
   "class": "block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline"
 };
-var _hoisted_24 = {
+var _hoisted_25 = {
   "class": "mt-2 text-sm text-gray-600 dark:text-gray-400"
 };
-var _hoisted_25 = {
+var _hoisted_26 = {
   key: 1,
   "class": "py-10"
 };
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "animate-spin h-16 w-16 mx-auto",
   xmlns: "http://www.w3.org/2000/svg",
   fill: "none",
@@ -453,46 +454,46 @@ var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_27 = [_hoisted_26];
-var _hoisted_28 = {
+var _hoisted_28 = [_hoisted_27];
+var _hoisted_29 = {
   key: 2
 };
 
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-center text-3xl"
 }, "NO RESULT", -1
 /* HOISTED */
 );
 
-var _hoisted_30 = [_hoisted_29];
-var _hoisted_31 = {
+var _hoisted_31 = [_hoisted_30];
+var _hoisted_32 = {
   "class": "bg-white dark:bg-gray-900"
 };
-var _hoisted_32 = {
+var _hoisted_33 = {
   "class": "container md:px-16 px-6 py-10 mx-auto"
 };
 
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-3xl font-semibold text-blue-600 capitalize lg:text-4xl dark:text-white"
 }, " Our Mission ", -1
 /* HOISTED */
 );
 
-var _hoisted_34 = {
+var _hoisted_35 = {
   "class": "my-10 md:px-10"
 };
 
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-2 text-sm text-gray-600 dark:text-gray-400 leading-loose"
 }, " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore sam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis. ", -1
 /* HOISTED */
 );
 
-var _hoisted_36 = {
+var _hoisted_37 = {
   "class": "mt-8 flex justify-center items-center"
 };
 
-var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("About CMU");
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("About CMU");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
@@ -505,29 +506,64 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.content.substring(0, 39) + "..."), 1
     /* TEXT */
-    ), _hoisted_8]);
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      to: {
+        name: 'single-post',
+        params: {
+          type: 'post',
+          id: post.id
+        }
+      },
+      "class": "bg-blue-600 p-3 w-full flex rounded-b-xl shadow-lg items-center justify-center text-sm text-white capitalize transition-colors duration-200 transform dark:text-blue-400 hover:underline dark:hover:text-blue-500"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_8, _hoisted_9];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["to"])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_9, _hoisted_11)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12, _hoisted_14))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" News & events "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, _hoisted_18, $setup.activities.length != 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.activities, function (activity) {
+  ))])) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, _hoisted_12)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, _hoisted_15))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" News & events "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, _hoisted_19, $setup.activities.length != 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.activities, function (activity) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: activity.id,
       "class": "max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      "class": "object-cover w-full h-52",
-      src: activity.image,
-      alt: "Article"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_20), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(activity.type), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(activity.title), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(activity.content.substring(0, 49) + "..."), 1
-    /* TEXT */
-    )])])]);
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      to: {
+        name: 'single-post',
+        params: {
+          type: 'activity',
+          id: activity.id
+        }
+      }
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+          "class": "object-cover w-full h-52",
+          src: activity.image,
+          alt: "Article"
+        }, null, 8
+        /* PROPS */
+        , _hoisted_21), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(activity.type), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(activity.title), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(activity.content.substring(0, 49) + "..."), 1
+        /* TEXT */
+        )])])];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["to"])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_25, _hoisted_27)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_28, _hoisted_30))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Our Mission                  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  ))])) : $setup.loading == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_26, _hoisted_28)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, _hoisted_31))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Our Mission                  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [_hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
       name: 'about'
     },
@@ -535,7 +571,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     href: "#"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_37];
+      return [_hoisted_38];
     }),
     _: 1
     /* STABLE */
@@ -577,7 +613,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 function useActivities() {
   var activities = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
   var activity = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
+  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)("");
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
   var news = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
   var events = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
@@ -589,12 +625,12 @@ function useActivities() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/activities/', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/activities/", {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -623,12 +659,12 @@ function useActivities() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context2.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/activities-home/', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/activities-home/", {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -650,34 +686,31 @@ function useActivities() {
     };
   }();
 
-  var getActivitiesFront = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(year) {
-      var response;
+  var getOtherActivities = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+      var id,
+          response,
+          _args3 = arguments;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              errors.value = '';
+              id = _args3.length > 0 && _args3[0] !== undefined ? _args3[0] : 0;
+              errors.value = "";
               loading.value = 1;
-              _context3.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/activities-front/' + year, {
+              _context3.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/activities-others/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 4:
+            case 5:
               response = _context3.sent;
               activities.value = response.data.data;
-              news.value = activities.value.filter(function (activity) {
-                return activity.type == 'news';
-              });
-              events.value = activities.value.filter(function (activity) {
-                return activity.type == 'events';
-              });
               loading.value = 2;
 
-            case 9:
+            case 8:
             case "end":
               return _context3.stop();
           }
@@ -685,33 +718,39 @@ function useActivities() {
       }, _callee3);
     }));
 
-    return function getActivitiesFront(_x) {
+    return function getOtherActivities() {
       return _ref3.apply(this, arguments);
     };
   }();
 
-  var getActivity = /*#__PURE__*/function () {
-    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id) {
+  var getActivitiesFront = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(year) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context4.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/activities/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/activities-front/" + year, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
             case 4:
               response = _context4.sent;
-              loading.value = 0;
-              activity.value = response.data.data;
+              activities.value = response.data.data;
+              news.value = activities.value.filter(function (activity) {
+                return activity.type == "news";
+              });
+              events.value = activities.value.filter(function (activity) {
+                return activity.type == "events";
+              });
+              loading.value = 2;
 
-            case 7:
+            case 9:
             case "end":
               return _context4.stop();
           }
@@ -719,24 +758,24 @@ function useActivities() {
       }, _callee4);
     }));
 
-    return function getActivity(_x2) {
+    return function getActivitiesFront(_x) {
       return _ref4.apply(this, arguments);
     };
   }();
 
-  var getActivity2 = /*#__PURE__*/function () {
+  var getActivity = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(id) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context5.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/activities2/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/activities/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -753,94 +792,81 @@ function useActivities() {
       }, _callee5);
     }));
 
-    return function getActivity2(_x3) {
+    return function getActivity(_x2) {
       return _ref5.apply(this, arguments);
     };
   }();
 
-  var createActivity = /*#__PURE__*/function () {
-    var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(data) {
-      var key;
+  var getActivity2 = /*#__PURE__*/function () {
+    var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(id) {
+      var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
         while (1) {
           switch (_context6.prev = _context6.next) {
             case 0:
-              errors.value = '';
-              _context6.prev = 1;
+              errors.value = "";
               loading.value = 1;
-              _context6.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/activities', data, {
+              _context6.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/activities2/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token),
-                  'Content-Type': 'multipart/form-data'
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 5:
-              loading.value = 2;
-              _context6.next = 11;
-              break;
+            case 4:
+              response = _context6.sent;
+              loading.value = 0;
+              activity.value = response.data.data;
 
-            case 8:
-              _context6.prev = 8;
-              _context6.t0 = _context6["catch"](1);
-
-              if (_context6.t0.response.status == 422) {
-                loading.value = 0;
-
-                for (key in _context6.t0.response.data.errors) {
-                  errors.value += _context6.t0.response.data.errors[key][0] + "\n";
-                }
-              }
-
-            case 11:
+            case 7:
             case "end":
               return _context6.stop();
           }
         }
-      }, _callee6, null, [[1, 8]]);
+      }, _callee6);
     }));
 
-    return function createActivity(_x4) {
+    return function getActivity2(_x3) {
       return _ref6.apply(this, arguments);
     };
   }();
 
-  var updateActivity = /*#__PURE__*/function () {
+  var createActivity = /*#__PURE__*/function () {
     var _ref7 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7(data) {
       var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
         while (1) {
           switch (_context7.prev = _context7.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context7.prev = 1;
               loading.value = 1;
               _context7.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/activities/' + activity.value.id, data, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/activities", data, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token),
-                  'Content-Type': 'multipart/form-data'
+                  Authorization: "Bearer ".concat(localStorage.token),
+                  "Content-Type": "multipart/form-data"
                 }
               });
 
             case 5:
               loading.value = 2;
-              _context7.next = 12;
+              _context7.next = 11;
               break;
 
             case 8:
               _context7.prev = 8;
               _context7.t0 = _context7["catch"](1);
-              loading.value = 0;
 
               if (_context7.t0.response.status == 422) {
+                loading.value = 0;
+
                 for (key in _context7.t0.response.data.errors) {
-                  errors.value += _context7.t0.response.data.errors[key][0] + '\t\n';
+                  errors.value += _context7.t0.response.data.errors[key][0] + "\n";
                 }
               }
 
-            case 12:
+            case 11:
             case "end":
               return _context7.stop();
           }
@@ -848,24 +874,26 @@ function useActivities() {
       }, _callee7, null, [[1, 8]]);
     }));
 
-    return function updateActivity(_x5) {
+    return function createActivity(_x4) {
       return _ref7.apply(this, arguments);
     };
   }();
 
-  var destroyActivity = /*#__PURE__*/function () {
-    var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee8(id) {
+  var updateActivity = /*#__PURE__*/function () {
+    var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee8(data) {
+      var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee8$(_context8) {
         while (1) {
           switch (_context8.prev = _context8.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context8.prev = 1;
               loading.value = 1;
               _context8.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/activities/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/activities/" + activity.value.id, data, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token),
+                  "Content-Type": "multipart/form-data"
                 }
               });
 
@@ -879,8 +907,10 @@ function useActivities() {
               _context8.t0 = _context8["catch"](1);
               loading.value = 0;
 
-              if (_context8.t0.response.status == '500') {
-                errors.value = 'Impossible de supprimer ce activity';
+              if (_context8.t0.response.status == 422) {
+                for (key in _context8.t0.response.data.errors) {
+                  errors.value += _context8.t0.response.data.errors[key][0] + "\t\n";
+                }
               }
 
             case 12:
@@ -891,8 +921,51 @@ function useActivities() {
       }, _callee8, null, [[1, 8]]);
     }));
 
-    return function destroyActivity(_x6) {
+    return function updateActivity(_x5) {
       return _ref8.apply(this, arguments);
+    };
+  }();
+
+  var destroyActivity = /*#__PURE__*/function () {
+    var _ref9 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee9(id) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee9$(_context9) {
+        while (1) {
+          switch (_context9.prev = _context9.next) {
+            case 0:
+              errors.value = "";
+              _context9.prev = 1;
+              loading.value = 1;
+              _context9.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/activities/" + id, {
+                headers: {
+                  Authorization: "Bearer ".concat(localStorage.token)
+                }
+              });
+
+            case 5:
+              loading.value = 2;
+              _context9.next = 12;
+              break;
+
+            case 8:
+              _context9.prev = 8;
+              _context9.t0 = _context9["catch"](1);
+              loading.value = 0;
+
+              if (_context9.t0.response.status == "500") {
+                errors.value = "Impossible de supprimer ce activity";
+              }
+
+            case 12:
+            case "end":
+              return _context9.stop();
+          }
+        }
+      }, _callee9, null, [[1, 8]]);
+    }));
+
+    return function destroyActivity(_x6) {
+      return _ref9.apply(this, arguments);
     };
   }();
 
@@ -903,6 +976,7 @@ function useActivities() {
     loading: loading,
     news: news,
     events: events,
+    getOtherActivities: getOtherActivities,
     getActivitiesHome: getActivitiesHome,
     getActivities: getActivities,
     getActivitiesFront: getActivitiesFront,
@@ -944,11 +1018,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 function usePosts() {
-  var _ref9;
+  var _ref10;
 
   var posts = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
   var post = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)([]);
-  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)('');
+  var errors = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)("");
   var loading = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(0);
 
   var getPosts = /*#__PURE__*/function () {
@@ -958,12 +1032,12 @@ function usePosts() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts/', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/posts/", {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -992,12 +1066,12 @@ function usePosts() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context2.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts-home/', {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/posts-home/", {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -1019,28 +1093,31 @@ function usePosts() {
     };
   }();
 
-  var getPostsUser = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(id) {
-      var response;
+  var getOtherPosts = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+      var id,
+          response,
+          _args3 = arguments;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              errors.value = '';
+              id = _args3.length > 0 && _args3[0] !== undefined ? _args3[0] : 0;
+              errors.value = "";
               loading.value = 1;
-              _context3.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts-user/' + id, {
+              _context3.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/posts-others/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 4:
+            case 5:
               response = _context3.sent;
               posts.value = response.data.data;
               loading.value = 2;
 
-            case 7:
+            case 8:
             case "end":
               return _context3.stop();
           }
@@ -1048,31 +1125,31 @@ function usePosts() {
       }, _callee3);
     }));
 
-    return function getPostsUser(_x) {
+    return function getOtherPosts() {
       return _ref3.apply(this, arguments);
     };
   }();
 
-  var getPost = /*#__PURE__*/function () {
+  var getPostsUser = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(id) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context4.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/posts-user/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
             case 4:
               response = _context4.sent;
-              loading.value = 0;
-              post.value = response.data.data;
+              posts.value = response.data.data;
+              loading.value = 2;
 
             case 7:
             case "end":
@@ -1082,24 +1159,24 @@ function usePosts() {
       }, _callee4);
     }));
 
-    return function getPost(_x2) {
+    return function getPostsUser(_x) {
       return _ref4.apply(this, arguments);
     };
   }();
 
-  var getPost2 = /*#__PURE__*/function () {
+  var getPost = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(id) {
       var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               loading.value = 1;
               _context5.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/posts2/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/posts/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
@@ -1116,94 +1193,81 @@ function usePosts() {
       }, _callee5);
     }));
 
-    return function getPost2(_x3) {
+    return function getPost(_x2) {
       return _ref5.apply(this, arguments);
     };
   }();
 
-  var createPost = /*#__PURE__*/function () {
-    var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(data) {
-      var key;
+  var getPost2 = /*#__PURE__*/function () {
+    var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6(id) {
+      var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
         while (1) {
           switch (_context6.prev = _context6.next) {
             case 0:
-              errors.value = '';
-              _context6.prev = 1;
+              errors.value = "";
               loading.value = 1;
-              _context6.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/posts', data, {
+              _context6.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/posts2/" + id, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token),
-                  'Content-Type': 'multipart/form-data'
+                  Authorization: "Bearer ".concat(localStorage.token)
                 }
               });
 
-            case 5:
-              loading.value = 2;
-              _context6.next = 11;
-              break;
+            case 4:
+              response = _context6.sent;
+              loading.value = 0;
+              post.value = response.data.data;
 
-            case 8:
-              _context6.prev = 8;
-              _context6.t0 = _context6["catch"](1);
-
-              if (_context6.t0.response.status == 422) {
-                loading.value = 0;
-
-                for (key in _context6.t0.response.data.errors) {
-                  errors.value += _context6.t0.response.data.errors[key][0] + "\n";
-                }
-              }
-
-            case 11:
+            case 7:
             case "end":
               return _context6.stop();
           }
         }
-      }, _callee6, null, [[1, 8]]);
+      }, _callee6);
     }));
 
-    return function createPost(_x4) {
+    return function getPost2(_x3) {
       return _ref6.apply(this, arguments);
     };
   }();
 
-  var updatePost = /*#__PURE__*/function () {
+  var createPost = /*#__PURE__*/function () {
     var _ref7 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7(data) {
       var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
         while (1) {
           switch (_context7.prev = _context7.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context7.prev = 1;
               loading.value = 1;
               _context7.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/posts/' + post.value.id, data, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/posts", data, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token),
-                  'Content-Type': 'multipart/form-data'
+                  Authorization: "Bearer ".concat(localStorage.token),
+                  "Content-Type": "multipart/form-data"
                 }
               });
 
             case 5:
               loading.value = 2;
-              _context7.next = 12;
+              _context7.next = 11;
               break;
 
             case 8:
               _context7.prev = 8;
               _context7.t0 = _context7["catch"](1);
-              loading.value = 0;
 
               if (_context7.t0.response.status == 422) {
+                loading.value = 0;
+
                 for (key in _context7.t0.response.data.errors) {
-                  errors.value += _context7.t0.response.data.errors[key][0] + '\t\n';
+                  errors.value += _context7.t0.response.data.errors[key][0] + "\n";
                 }
               }
 
-            case 12:
+            case 11:
             case "end":
               return _context7.stop();
           }
@@ -1211,24 +1275,26 @@ function usePosts() {
       }, _callee7, null, [[1, 8]]);
     }));
 
-    return function updatePost(_x5) {
+    return function createPost(_x4) {
       return _ref7.apply(this, arguments);
     };
   }();
 
-  var destroyPost = /*#__PURE__*/function () {
-    var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee8(id) {
+  var updatePost = /*#__PURE__*/function () {
+    var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee8(data) {
+      var key;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee8$(_context8) {
         while (1) {
           switch (_context8.prev = _context8.next) {
             case 0:
-              errors.value = '';
+              errors.value = "";
               _context8.prev = 1;
               loading.value = 1;
               _context8.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/posts/' + id, {
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/posts/" + post.value.id, data, {
                 headers: {
-                  'Authorization': "Bearer ".concat(localStorage.token)
+                  Authorization: "Bearer ".concat(localStorage.token),
+                  "Content-Type": "multipart/form-data"
                 }
               });
 
@@ -1242,8 +1308,10 @@ function usePosts() {
               _context8.t0 = _context8["catch"](1);
               loading.value = 0;
 
-              if (_context8.t0.response.status == '500') {
-                errors.value = 'Impossible de supprimer ce post';
+              if (_context8.t0.response.status == 422) {
+                for (key in _context8.t0.response.data.errors) {
+                  errors.value += _context8.t0.response.data.errors[key][0] + "\t\n";
+                }
               }
 
             case 12:
@@ -1254,16 +1322,60 @@ function usePosts() {
       }, _callee8, null, [[1, 8]]);
     }));
 
-    return function destroyPost(_x6) {
+    return function updatePost(_x5) {
       return _ref8.apply(this, arguments);
     };
   }();
 
-  return _ref9 = {
+  var destroyPost = /*#__PURE__*/function () {
+    var _ref9 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee9(id) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee9$(_context9) {
+        while (1) {
+          switch (_context9.prev = _context9.next) {
+            case 0:
+              errors.value = "";
+              _context9.prev = 1;
+              loading.value = 1;
+              _context9.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/posts/" + id, {
+                headers: {
+                  Authorization: "Bearer ".concat(localStorage.token)
+                }
+              });
+
+            case 5:
+              loading.value = 2;
+              _context9.next = 12;
+              break;
+
+            case 8:
+              _context9.prev = 8;
+              _context9.t0 = _context9["catch"](1);
+              loading.value = 0;
+
+              if (_context9.t0.response.status == "500") {
+                errors.value = "Impossible de supprimer ce post";
+              }
+
+            case 12:
+            case "end":
+              return _context9.stop();
+          }
+        }
+      }, _callee9, null, [[1, 8]]);
+    }));
+
+    return function destroyPost(_x6) {
+      return _ref9.apply(this, arguments);
+    };
+  }();
+
+  return _ref10 = {
     posts: posts,
     post: post,
     errors: errors,
     loading: loading,
+    getOtherPosts: getOtherPosts,
     getPosts: getPosts,
     getPostsHome: getPostsHome,
     getPost: getPost,
@@ -1271,7 +1383,7 @@ function usePosts() {
     updatePost: updatePost,
     destroyPost: destroyPost,
     getPost2: getPost2
-  }, _defineProperty(_ref9, "getPosts", getPosts), _defineProperty(_ref9, "getPostsUser", getPostsUser), _ref9;
+  }, _defineProperty(_ref10, "getPosts", getPosts), _defineProperty(_ref10, "getPostsUser", getPostsUser), _ref10;
 }
 
 /***/ }),

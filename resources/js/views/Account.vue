@@ -1,15 +1,35 @@
 <script setup>
-import { UserCircleIcon } from "@heroicons/vue/solid";
-import { onMounted, ref, computed } from "vue";
+import { UserCircleIcon, TrashIcon, PencilIcon } from "@heroicons/vue/solid";
+import { onMounted, ref, watch } from "vue";
 import useTheses from "../services/thesesServices.js";
 import useMembers from "../services/memberServices.js";
+import usePosts from "../services/postServices.js";
 const props = defineProps({
     id: String,
     name: String,
 });
 const { getMember2, member, errors, loading } = useMembers();
 const { these, getThesesUser } = useTheses();
-onMounted(getMember2(props.id), getThesesUser(props.id));
+const { posts, getPostsUser, destroyPost } = usePosts();
+onMounted(
+    getMember2(props.id),
+    getThesesUser(props.id),
+    getPostsUser(props.id)
+);
+watch(props, (newProps, oldProps) => {
+    getMember2(newProps.id);
+    getThesesUser(newProps.id);
+    getPostsUser(newProps.id);
+});
+const user = localStorage.user ? JSON.parse(localStorage.user) : "";
+const deletePost = async (id) => {
+    if (confirm("I you Sure ?")) {
+        await destroyPost(id);
+        if (errors.value == "") {
+            await getPostsUser(props.id);
+        }
+    }
+};
 </script>
 
 <template>
@@ -41,18 +61,30 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                     <span v-if="member.university">{{
                         member.university.name
                     }}</span>
-                    <span class="ml-4 text-blue-500 hover:underline"
+                    <a
+                        v-if="member.researchgate_account"
+                        :href="member.researchgate_account"
+                        class="ml-4 text-blue-500 hover:underline"
                         >@researchgateaccount
-                    </span>
+                    </a>
                 </h4>
             </div>
         </div>
         <div class="flex items-center mt-3 md:mt-0">
-            <button
+            <routerLink
+                :to="{ name: 'post.add' }"
+                v-if="user.id == member.id"
+                class="px-6 py-2 w-full leading-5 text-center text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+            >
+                Add Publication
+            </routerLink>
+            <a
+                :href="'mailto:' + member.email"
+                v-else
                 class="px-6 py-2 w-full leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
             >
                 Contact
-            </button>
+            </a>
         </div>
     </div>
     <!-- cv -->
@@ -80,17 +112,90 @@ onMounted(getMember2(props.id), getThesesUser(props.id));
                     </h1>
                 </div>
 
-                <!-- <div class="h-full py-4">
-                <div class="w-full md:h-28 md:flex justify-between shadow-md border">
-                   <img src="/assets/img_caroussel/img_caroussel3.jpg" class="md:w-32 md:h-full object-cover w-full h-24" alt="">
-                   <div class="p-2 w-full text-center md:text-left">
-                       <h3 class="text-md">Lorem, ipsum dolor sit amet consectetur</h3>
-                       <p class="text-sm font-light mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid laborum maxime illo quis at officiis suscipit</p>
-                       <a href="#" class="text-sm text-blue-600 mt-2 hover:underline">Read More</a>
-                   </div>
-                   <div class="px-1 h-full bg-gray-400 w-1 md:block hidden">&nbsp;</div>
-                </div>   
-            </div> -->
+                <div class="h-full py-4">
+                    <div
+                        v-if="posts.length != 0"
+                        class="w-full lg:flex justify-between shadow border"
+                        v-for="post in posts"
+                        :key="post.id"
+                    >
+                        <router-link
+                            class="w-full md:h-28 md:flex"
+                            :to="{
+                                name: 'single-post',
+                                params: {
+                                    type: 'post',
+                                    id: post.id,
+                                },
+                            }"
+                        >
+                            <img
+                                :src="post.image"
+                                class="md:w-32 md:h-full object-cover w-full h-24"
+                                alt=""
+                            />
+                            <div class="p-2 text-center md:text-left w-full">
+                                <h3 class="text-md">{{ post.title }}</h3>
+                                <p class="text-sm font-light mt-2">
+                                    {{ post.content.substring(0, 19) + "..." }}
+                                </p>
+                                <button
+                                    type="button"
+                                    class="text-sm text-blue-600 mt-2 hover:underline"
+                                >
+                                    Read More
+                                </button>
+                            </div>
+                        </router-link>
+                        <div
+                            v-if="user.id == member.id"
+                            class="p-4 flex justify-center space-x-2"
+                        >
+                            <a href="#" @click.prevent="deletePost(post.id)">
+                                <TrashIcon
+                                    class="h-6 w-6 text-red-500 hover:text-red-400"
+                                />
+                            </a>
+                            <router-link
+                                :to="{
+                                    name: 'post.edit',
+                                    params: {
+                                        id: post.id,
+                                    },
+                                }"
+                            >
+                                <PencilIcon
+                                    class="h-6 w-6 text-blue-500 hover:text-blue-400"
+                                />
+                            </router-link>
+                        </div>
+                    </div>
+                    <div v-else-if="loading == 1" class="py-10">
+                        <svg
+                            class="animate-spin h-16 w-16 mx-auto"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <circle
+                                class="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                stroke-width="4"
+                            ></circle>
+                            <path
+                                class="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div v-else class="w-full">
+                        <p class="text-center w-full text-lg py-8">No Posts</p>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -11,7 +11,10 @@ const About = () => import("../views/About.vue");
 const Membership = () => import("../views/Membership.vue");
 const SinglePost = () => import("../views/SinglePost.vue");
 const Join = () => import("../views/Join.vue");
+const AddPost = () => import("../views/AddPost.vue");
+const EditPost = () => import("../views/EditPost.vue");
 const Account = () => import("../views/Account.vue");
+const AccountSetting = () => import("../views/AccountSetting.vue");
 const Dashboard = () => import("../views/back/Dashboard.vue");
 const LoginAdmin = () => import("../views/back/Login.vue");
 const PostIndex = () => import("../views/back/post/PostIndex.vue");
@@ -127,6 +130,23 @@ const routes = [
         },
     },
     {
+        path: "/add-post",
+        name: "post.add",
+        component: AddPost,
+        meta: {
+            title: siteName + " - Add Post",
+        },
+    },
+    {
+        path: "/edit-post/:id",
+        component: EditPost,
+        props: true,
+        name: "post.edit",
+        meta: {
+            title: siteName + " - Edit Post",
+        },
+    },
+    {
         path: "/:type/:id",
         name: "single-post",
         props: true,
@@ -142,6 +162,15 @@ const routes = [
         props: true,
         meta: {
             title: siteName + " - Account",
+        },
+    },
+    {
+        path: "/account-setting",
+        name: "account.setting",
+        component: AccountSetting,
+        // props: true,
+        meta: {
+            title: siteName + " - Account Setting",
         },
     },
     {

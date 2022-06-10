@@ -94,8 +94,15 @@ const logout = async () => {
                                     @click="openProfil = !openProfil"
                                     class="flex space-x-2 items-center text-white transition-colors duration-200 text-sm bg-primary-blue px-3 py-2 uppercase"
                                 >
-                                    <span v-if="user.avatar">
-                                        <img :src="user.avatar" alt="" />
+                                    <span
+                                        v-if="user.avatar"
+                                        class="h-14 w-14 overflow-hidden rounded-full"
+                                    >
+                                        <img
+                                            :src="user.avatar"
+                                            class="w-full h-full object-cover"
+                                            :alt="currentPost.user.firstname"
+                                        />
                                     </span>
                                     <UserCircleIcon
                                         v-else
@@ -114,20 +121,21 @@ const logout = async () => {
                                                 id: user.id,
                                             },
                                         }"
-                                        href=""
                                         class="block py-2 px-4 text-xs hover:bg-blue-500 hover:text-white"
                                         >My Account</router-link
                                     >
-                                    <a
-                                        href=""
+                                    <router-link
+                                        :to="{
+                                            name: 'account.setting',
+                                        }"
                                         class="block py-2 px-4 text-xs hover:bg-blue-500 hover:text-white"
-                                        >Account Setting</a
+                                        >Account Setting</router-link
                                     >
                                     <button
                                         @click="logout()"
-                                        class="block py-2 px-4 text-xs hover:bg-blue-500 hover:text-white"
+                                        class="block w-full py-2 px-4 text-xs hover:bg-blue-500 hover:text-white"
                                     >
-                                        Se Deconnecter
+                                        Log out
                                     </button>
                                 </div>
                             </button>

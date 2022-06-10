@@ -30,7 +30,7 @@ class MemberController extends Controller
     public function store(Request $request)
     {
         $fileds = $request->validate([
-            'firstname' => 'required|string', 
+            'firstname' => 'required|string',
             'lastname' => 'required|string',
             'type' => 'required|string',
             'field_research' => 'required|string',
@@ -55,27 +55,27 @@ class MemberController extends Controller
             'password' => Hash::make($fileds['password']),
         ];
 
-        if($request->file('cv_path')){
+        if ($request->file('cv_path')) {
             $request->validate([
-                'cv_path' => 'required|mimes:png,jpg,jpeg,csv,txt,xlx,xls,pdf|max:2048'
+                'cv_path' => 'required|mimes:pdf|max:2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('cv_path')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('cv_path')->extension();
             $request->file('cv_path')->storePubliclyAs('public', $filename);
             $data['cv_path'] = $filename;
         }
 
-        if($request->file('avatar')){
+        if ($request->file('avatar')) {
             $request->validate([
-                'avatar' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
+                'avatar' => 'required|mimes:png,jpg,jpeg,gif|dimensions:max_width=2048,max_height=2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('avatar')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('avatar')->extension();
             $request->file('avatar')->storePubliclyAs('public', $filename);
             $data['avatar'] = $filename;
         }
-      
-    $user = User::create($data);
-   
-    return new MemberResource($user);
+
+        $user = User::create($data);
+
+        return new MemberResource($user);
     }
 
     /**
@@ -104,7 +104,7 @@ class MemberController extends Controller
     public function update(Request $request, $user)
     {
         $fileds = $request->validate([
-            'firstname' => 'required|string', 
+            'firstname' => 'required|string',
             'lastname' => 'required|string',
             'type' => 'required|string',
             'field_research' => 'required|string',
@@ -127,27 +127,27 @@ class MemberController extends Controller
             'email' => $fileds['email'],
         ];
 
-        if($request->file('cv_path')){
+        if ($request->file('cv_path')) {
             $request->validate([
                 'cv_path' => 'required|mimes:png,jpg,jpeg,csv,txt,xlx,xls,pdf|max:2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('cv_path')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('cv_path')->extension();
             $request->file('cv_path')->storePubliclyAs('public', $filename);
             $data['cv_path'] = $filename;
         }
 
-        if($request->file('avatar')){
+        if ($request->file('avatar')) {
             $request->validate([
                 'avatar' => 'required|mimes:png,jpg,jpeng,gif|dimensions:max_width=2048,max_height=2048'
             ]);
-            $filename = '/uploads/'.time().'.'. $request->file('avatar')->extension();
+            $filename = '/uploads/' . time() . '.' . $request->file('avatar')->extension();
             $request->file('avatar')->storePubliclyAs('public', $filename);
             $data['avatar'] = $filename;
         }
 
         $user = User::find($user);
         $user->update($data);
-    
+
         return new MemberResource($user);
     }
 

@@ -34,6 +34,11 @@ class PostController extends Controller
         }
     }
 
+    public function post_user($id)
+    {
+        return PostResource::collection(Post::where('user_id', '=', $id)->orderBy('id', 'desc')->get());
+    }
+
     /**
      * Store a newly created resource in storage.
      *
